@@ -14,8 +14,11 @@ def fun_rotatestrings(s, n):
 		return s
 	elif n < 0:
 		for i in range(-(n)):
-			s = s[l - 1] + s[: (l-2)]
+			s = s[l - 1] + s[: (l-1)]
 		return s
 	else:
 		return s
+
+print(fun_rotatestrings("abcd",-6))
+print(fun_rotatestrings("abcd",1))
 
