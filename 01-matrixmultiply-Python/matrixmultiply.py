@@ -5,23 +5,26 @@
 
 
 def fun_matrixmultiply(m1, m2):
+    # print("divya")
     r1 = len(m1)
     c1 = len(m1[0])
 
     r2 = len(m2)
     c2 = len(m2[0])
+    # print(r1,c1,r2,c2)
     if c1 != r2:
         return None
     else :
-        c = []
-        for h in range(c1):
-            for l in range(r2):
-                c[h][l] = 0
-        for i in range(r1):
-            for j in range(c2):
-                for k in range(r2):
+        c = [[0]*c2]*r1
+        
+        for i in range(len(m1)):
+            for j in range(len(m2[0])):
+                for k in range(len(m2)):
                     c[i][j] += m1[i][k] * m2[k][j]
+                    # print(c[i][j])
         return c
+
+fun_matrixmultiply([[1, 3], [2, 4]], [[1, 3, 2, 2], [2, 4, 5, 1]])
 
 
 
