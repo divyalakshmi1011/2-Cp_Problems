@@ -24,7 +24,7 @@ def fun_matrixmultiply(m1, m2):
                     # print(c[i][j])
         return c
 
-fun_matrixmultiply([[1, 3], [2, 4]], [[1, 3, 2, 2], [2, 4, 5, 1]])
+print(fun_matrixmultiply([[1, 3], [2, 4]], [[1, 3, 2, 2], [2, 4, 5, 1]]))
 
 
 
