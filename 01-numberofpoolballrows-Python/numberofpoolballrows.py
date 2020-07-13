@@ -6,5 +6,14 @@
 # numberOfPoolBallRows(7) returns 4 (since the 4th row must have a single ball in it).
 
 def fun_numberofpoolballrows(balls):
-	return 0
+	count = 0
+	t = balls
+	for i in range(1,balls):
+		if(t >= 0):
+			print("t",t)
+			t = t - i
+			count += 1
+	return count
+
+print(fun_numberofpoolballrows(6))
 
