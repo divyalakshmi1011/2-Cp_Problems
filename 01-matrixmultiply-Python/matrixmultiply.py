@@ -5,7 +5,20 @@
 
 
 def fun_matrixmultiply(m1, m2):
-    return None
+    r1 = len(m1)
+    c1 = len(m2[0])
+
+    r2 = len(m2)
+    c2 = len(m2[0])
+    if c1 != r2:
+        return None
+    else :
+        c = []
+        for i in range(r1):
+            for j in range(c2):
+                for k in range(r2):
+                    c[i][j] = m1[i][k] * m2[k][j]
+        return c
 
 
 
