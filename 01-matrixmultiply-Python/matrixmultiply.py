@@ -15,11 +15,12 @@ def fun_matrixmultiply(m1, m2):
     if c1 != r2:
         return None
     else :
-        c = [[0]*c2]*r1
+        c = [[0]*(c2)]*(r1)
         
         for i in range(len(m1)):
             for j in range(len(m2[0])):
                 for k in range(len(m2)):
+                    print(m1[i][k], m2[k][j])
                     c[i][j] += (m1[i][k] * m2[k][j])
                     # print(c[i][j])
         return c
