@@ -7,7 +7,20 @@
 
 
 public class PythonBasics {
+	PythonBasics() {
+
+	}
+	String a = "";
     public String show_excitement() {
-    	// your code goes here
+		// your code goes here
+		for(int i = 0; i < 5; i++) {
+		a += "I am super excited for this course!" + " ";
+		}
+		return a;
+	}
+	public static void main(String[] args) {
+		PythonBasics p = new PythonBasics();
+		System.out.println(p.show_excitement());
 	}
 }
+
