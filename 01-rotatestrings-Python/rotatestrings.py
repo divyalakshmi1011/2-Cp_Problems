@@ -20,5 +20,5 @@ def fun_rotatestrings(s, n):
 		return s
 
 print(fun_rotatestrings("abcd",-6))
-print(fun_rotatestrings("abcd",1))
+print(fun_rotatestrings("ac323",0))
 
