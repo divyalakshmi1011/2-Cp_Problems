@@ -27,9 +27,6 @@ def fun_nth_tidynumber(n):
 
             else:
                 count = count + 1
-                t = t + 1
-        else:
-            print("divya")
-            t = t + 1
+        t = t + 1
 
-print(fun_nth_tidynumber(5))
+print(fun_nth_tidynumber(15))
