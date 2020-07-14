@@ -13,4 +13,4 @@ def isevenpositiveint(x):
 				return True
 	return False
 
-print(isevenpositiveint([12]))
+print(isevenpositiveint((12)))
