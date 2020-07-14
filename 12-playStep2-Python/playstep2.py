@@ -29,5 +29,40 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
-	# your code goes here
+	st = str(hand)
+	x = st[0]
+	y = st[1]
+	z = st[2]
+	if int(y) == int(z):
+		n = dice%10
+		dice = dice/10
+		if n > int(y):
+			s = int(str(n) + str(y) + str(y))
+			return (s, int(dice))
+		else:
+			s=int(str(y) + str(y) + str(n))
+			return (s, int(dice))
+	elif int(x) != int(y) != int(z):
+		n = dice%10
+		dice = dice//10
+		if n > int(x):
+			s = str(n)+x
+			n1 = dice%10
+			dice = dice//10
+			if n1 > n:
+				s = str(n1)+s
+				s = int(s)
+				return (s, dice)
+			elif n1 <= int(x):
+				s = s + str(n1)
+				s = int(s)
+				return (s,dice)
+		else:
+			s = x + str(n)
+			n1 = dice%10
+			dice = dice//10
+			if n1 < n:
+				s = s + str(n1)
+				s = int(s)
+				return(s,dice)
 	pass
