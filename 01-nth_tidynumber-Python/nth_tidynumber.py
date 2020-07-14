@@ -15,7 +15,7 @@ def isTidy(num):
         p = rem
     return True
 def fun_nth_tidynumber(n):
-    count = 0
+    count = 1
     t = 1
     while(count <= n):
         print("t",t,count)
