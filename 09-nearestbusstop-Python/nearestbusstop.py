@@ -14,3 +14,5 @@ def fun_nearestbusstop(street):
 		return stop
 	else:
 		return stop + 1
+
+print(fun_nearestbusstop(12))
