@@ -18,12 +18,15 @@ def fun_nth_tidynumber(n):
     count = 0
     t = 1
     while(count <= n):
+        print("t",t,count)
         if(isTidy(t)):
-            print(t,count)
             count = count + 1
             if(count == n):
                 return t
+            else:
+                t = t + 1
         else:
+            print("divya")
             t = t + 1
 
 print(fun_nth_tidynumber(15))
