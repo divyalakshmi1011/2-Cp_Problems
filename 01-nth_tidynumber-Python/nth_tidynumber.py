@@ -32,4 +32,4 @@ def fun_nth_tidynumber(n):
             print("divya")
             t = t + 1
 
-print(fun_nth_tidynumber(0))
+print(fun_nth_tidynumber(5))
