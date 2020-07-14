@@ -20,10 +20,13 @@ def fun_nth_tidynumber(n):
     while(count <= n):
         print("t",t,count)
         if(isTidy(t)):
-            count = count + 1
+            
             if(count == n):
+                print("divya")
                 return t
+
             else:
+                count = count + 1
                 t = t + 1
         else:
             print("divya")
