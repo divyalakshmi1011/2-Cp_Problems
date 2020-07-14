@@ -8,8 +8,7 @@
 def fun_isfactor(f, n):
 	if(n == 0):
 		if(f == 0):
-			return False
-
+			return True
 		else:
 			return True
 	if(f == 0):
