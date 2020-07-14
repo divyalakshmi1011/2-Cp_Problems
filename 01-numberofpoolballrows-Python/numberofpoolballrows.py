@@ -13,7 +13,9 @@ def fun_numberofpoolballrows(balls):
 			# print("t",t)
 			t = t - i
 			count += 1
+		else:
+			break
 	return count
 
-print(fun_numberofpoolballrows(500500))
+print(fun_numberofpoolballrows(4999950000))
 
