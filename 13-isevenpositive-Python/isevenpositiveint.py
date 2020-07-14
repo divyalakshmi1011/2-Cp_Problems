@@ -11,3 +11,5 @@ def isevenpositiveint(x):
 			if(x%2 == 0):
 				return True
 	return False
+
+print(isevenpositiveint((12)))
