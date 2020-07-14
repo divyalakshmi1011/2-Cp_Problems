@@ -8,7 +8,8 @@ from math import sqrt
 
 def fun_circlesintersect(x1, y1, r1, x2, y2, r2):
 	d = fun_distance(x1,y1,x2,y2)
-	if((r1 - r2) <= d <= (r1 + r2)):
+	print(d)
+	if(d <= (r1+r2)):
 		return True
 	# your code goes here
 	return False 
