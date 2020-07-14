@@ -16,9 +16,12 @@ def handtodice(hand):
 		l.append(rem)
 	l.reverse()
 	s = "("
-	for item in l:
-		s = s + str(item) +","
+	for i in range(len(l)): 
+		if(i < len(l)-1):
+			s = s + str(l[i]) +", "
+		else:
+			s = s + str(l[i])
 	s = s + ")"
-	return s
+	return tuple(l)
 
 print(handtodice(123))
