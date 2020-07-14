@@ -12,5 +12,4 @@ def fun_eggcartons(eggs):
 		count += 1
 	# your code goes here
 	return count
-
 print(fun_eggcartons(60))
