@@ -11,6 +11,6 @@ class recursion {
 		return get_fib(n - 1) + get_fib(n - 2);
 	}
 	public static void main(String[] args) {
-		System.out.println(get_fib(10));
+		System.out.println(get_fib(9));
 	}
 }
