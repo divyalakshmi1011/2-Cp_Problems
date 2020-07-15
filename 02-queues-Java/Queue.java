@@ -9,14 +9,17 @@ public class Queue{
 	}
 	
 	public void enqueue(int new_ele){
-
+			 this.rear = this.rear + 1;
+			 storage[rear] = new_ele;
 	}
 
 	public int peek(){
-		return 0;
+		return storage[this.front];
 	}
 
 	public int dequeue(){
-		return 0;
+		int item = this.storage[this.front];
+		this.front = this.front + 1; 
+		return item;
 	}
 }
