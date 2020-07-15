@@ -48,10 +48,10 @@ def playstep2(hand, dice):
 		dice = dice/10
 		if n > int(y):
 			s = int(str(n) + str(y) + str(y))
-			return (s)
+			return (s, int(dice))
 		else:
 			s=int(str(y) + str(y) + str(n))
-			return (s)
+			return (s, int(dice))
 	elif int(x) != int(y) != int(z):
 		n = dice%10
 		dice = dice//10
@@ -62,11 +62,11 @@ def playstep2(hand, dice):
 			if n1 > n:
 				s = str(n1)+s
 				s = int(s)
-				return (s)
+				return (s, dice)
 			elif n1 <= int(x):
 				s = s + str(n1)
 				s = int(s)
-				return (s)
+				return (s,dice)
 		else:
 			s = x + str(n)
 			n1 = dice%10
@@ -74,12 +74,13 @@ def playstep2(hand, dice):
 			if n1 < n:
 				s = s + str(n1)
 				s = int(s)
-				return(s)
+				return(s,dice)
+
 
 def bonusplaythreediceyahtzee(dice):
 	s = str(dice)
-	dice = int(s[:5])
-	hand = int(s[5:])
-	temp = playstep2(hand,dice)
-	print(temp)
-
+	dice = int(s[:4])
+	hand = int(s[4:])
+	x,y = playstep2(hand,dice)
+	print(x)
+	# print(y)
