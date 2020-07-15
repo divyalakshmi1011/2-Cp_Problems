@@ -6,4 +6,10 @@
 
 
 def fun_get_kth_digit(digit, k):
+	s = str(digit)
+	if(k < len(s)):
+		c = s[::-1]
+		return int(c[k])
 	return 0
+
+print(fun_get_kth_digit(789,4))
