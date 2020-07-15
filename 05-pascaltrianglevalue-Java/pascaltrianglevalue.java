@@ -5,17 +5,20 @@
 // # each row starts at column 0. If either row or col 
 // # are not legal values, return None, instead of crashing.
 
-class pascaltrianglevalue {
-	public static void print(int n) {
-		for (int i = 0; i < n; i++) {
-			for (int j = 0; j <= i; j++) {
-				System.out.print(fun_pascaltrianglevalue(i, j) + " ");
-			}
-			System.out.println();
-		}
+public class pascaltrianglevalue {
+	pascaltrianglevalue() {
+
 	}
+	// public static void print(int n) {
+	// 	for (int i = 0; i < n; i++) {
+	// 		for (int j = 0; j <= i; j++) {
+	// 			System.out.print(fun_pascaltrianglevalue(i, j) + " ");
+	// 		}
+	// 		System.out.println();
+	// 	}
+	// }
  
-	public static int fun_pascaltrianglevalue(int i, int j){
+	public int fun_pascaltrianglevalue(int i, int j){
 		if (j == 0) {
 			return 1;
 		} else if (j == i) {
@@ -24,8 +27,8 @@ class pascaltrianglevalue {
 			return fun_pascaltrianglevalue(i - 1, j - 1) + fun_pascaltrianglevalue(i - 1, j);
 		}
 	}
-	public static void main(String[] args) {
-		print(10);
-		System.out.println(fun_pascaltrianglevalue(5, 2));
-	}
+	// public static void main(String[] args) {
+	// 	print(10);
+	// 	System.out.println(fun_pascaltrianglevalue(5, 2));
+	// }
 }
