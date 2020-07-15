@@ -14,10 +14,13 @@
 
 def fun_fabricyards(inches):
 	# your code goes here
-	return 1
+	x = inches//36
+	if(x == 0):
+		return 1
+	return x
 
 def fun_fabricexcess(inches):
 	# your code goes here
 	return 1
 
-
+print(fun_fabricyards(1))
