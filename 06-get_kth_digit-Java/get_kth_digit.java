@@ -19,7 +19,8 @@ class get_kth_digit {
 			input1 = input1.reverse();
 			return Integer.parseInt((input1.toString().charAt(k)) + "");
     
+		} else {
+			return 0;
 		}
-		return 0;
 	}
 }
