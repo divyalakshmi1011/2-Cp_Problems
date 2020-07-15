@@ -8,10 +8,13 @@
 
 class nth_fibonacci {
 	public static int fun_nthfibonaccinumber(int n){
-		if(n <= 1) {
-			return n;
+		if(n == 0) {
+			return 1;
 		}
-		n = n + 1;
+		if(n == 1) {
+			return 1;
+		}
+		// n = n + 1;
 		return fun_nthfibonaccinumber(n - 1) + fun_nthfibonaccinumber(n - 2);
 	}
 	public static void main(String[] args) {
