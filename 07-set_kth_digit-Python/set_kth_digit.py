@@ -10,12 +10,21 @@ def fun_set_kth_digit(n, k, d):
 	s = str(n)
 	if(k < len(s)):
 		c = s[::-1]
-		c[k] = d
-		return int(c[::-1])
+		p = list(c)
+		p[k] = str(d)
+		l ="".join(p)
+		if(n < 0):
+			return 0-int(l[::-1])
+		return int(l[::-1])
 	elif(k == len(s)):
 		c = s[::-1]
-		c += str(d)
+		m = str(d)
+		c = c +  m
+		if(n < 0):
+			return 0 - int(c[::-1]) 
 		return int(c[::-1])
 	else:
 		return 0
+
+print(fun_set_kth_digit(-324,3,6))
 
