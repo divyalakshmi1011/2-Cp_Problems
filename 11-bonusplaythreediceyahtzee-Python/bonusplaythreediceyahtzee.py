@@ -80,7 +80,7 @@ def bonusplaythreediceyahtzee(dice):
 	dice = int(s[:4])
 	hand = int(s[4:])
 	x = playstep2(hand,dice)
-	print("xx",x)
+	# print("xx",x)
 	# print(y)
 	a = playstep2(x[0],x[1])
 	# print(a)
