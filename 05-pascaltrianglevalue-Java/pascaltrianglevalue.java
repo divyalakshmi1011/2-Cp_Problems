@@ -24,4 +24,8 @@ class pascaltrianglevalue {
 			return fun_pascaltrianglevalue(i - 1, j - 1) + fun_pascaltrianglevalue(i - 1, j);
 		}
 	}
+	public static void main(String[] args) {
+		print(10);
+		System.out.println(fun_pascaltrianglevalue(5, 2));
+	}
 }
