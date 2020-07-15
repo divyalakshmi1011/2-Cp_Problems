@@ -79,7 +79,7 @@ def bonusplaythreediceyahtzee(dice):
 	print(h)
 	j = str(h)
 	if(j[0] == j[1] == j[2]):
-		score = 20 + int(j[0])
+		score = 20 + (3*int(j[0]))
 	elif(j[0] == j[1]):
 		score = 10 + int(j[0])
 	elif(j[1] == j[2]):
