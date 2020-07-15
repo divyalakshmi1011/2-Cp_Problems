@@ -6,7 +6,18 @@
 # are not legal values, return None, instead of crashing. 
 
 
+# def combination(n, k):
+#     if k == 0 or k == n:
+#         return str(1)
+#     else:
+#         return combination(str(n-1, k-1)) + combination(str(n-1,k))
 
 
 def fun_pascaltrianglevalue(row, col):
-	return 1
+	if row == 0 or col == 0:
+		return 1
+	else:
+		return fun_pascaltrianglevalue(row - 1, col - 1) + fun_pascaltrianglevalue(row - 1, col)
+
+print(fun_pascaltrianglevalue(5,2))
+
