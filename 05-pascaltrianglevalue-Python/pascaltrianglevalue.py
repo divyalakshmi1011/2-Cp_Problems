@@ -14,7 +14,7 @@
 
 
 def fun_pascaltrianglevalue(row, col):
-	if row == 0 or col == 0:
+	if col == row or col == 0:
 		return 1
 	else:
 		return fun_pascaltrianglevalue(row - 1, col - 1) + fun_pascaltrianglevalue(row - 1, col)
