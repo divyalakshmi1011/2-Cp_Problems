@@ -8,7 +8,9 @@
 
 class nth_fibonacci {
 	public int fun_nthfibonaccinumber(int n){
-		// your code goes here
-		return 0;
+		if(n <= 1) {
+			return n;
+		}
+		return fun_nthfibonaccinumber(n - 1) + fun_nthfibonaccinumber(n - 2);
 	}
 }
