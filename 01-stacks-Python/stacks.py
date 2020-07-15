@@ -31,12 +31,12 @@ class LinkedList(object):
         self.head = node
 
     def delete_first(self):
-        if(self.head != None):
-            temp = self.head
-            self.head = self.head.next
-            return temp
         "Delete the first (head) element in the LinkedList as return it"
-        return None
+        deleted = None
+        if self.head:
+            deleted = self.head
+            self.head = self.head.next
+        return deleted
 
 class stack(object):
     def __init__(self,top=None):
