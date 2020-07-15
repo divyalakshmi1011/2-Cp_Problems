@@ -58,10 +58,10 @@ e3 = Element(3)
 e4 = Element(4)
 
 # Start setting up a Stack
-stack = stack(e1)
+stacks = stack(e1)
 
 # Test stack functionality
-stack.push(e2)
-stack.push(e3)
-print(stack.pop().value)
+stacks.push(e2)
+stacks.push(e3)
+print(stacks.pop().value)
     
