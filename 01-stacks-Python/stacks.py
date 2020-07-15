@@ -50,4 +50,18 @@ class stack(object):
         "Pop (remove) the first element off the top of the stack and return it"
         return self.ll.delete_first()
         
+
+
+e1 = Element(1)
+e2 = Element(2)
+e3 = Element(3)
+e4 = Element(4)
+
+# Start setting up a Stack
+stack = stack(e1)
+
+# Test stack functionality
+stack.push(e2)
+stack.push(e3)
+print(stack.pop())
     
