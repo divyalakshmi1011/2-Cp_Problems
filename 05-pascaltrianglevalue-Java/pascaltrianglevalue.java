@@ -9,16 +9,16 @@ public class pascaltrianglevalue {
 	pascaltrianglevalue() {
 
 	}
-	// public static void print(int n) {
-	// 	for (int i = 0; i < n; i++) {
-	// 		for (int j = 0; j <= i; j++) {
-	// 			System.out.print(fun_pascaltrianglevalue(i, j) + " ");
-	// 		}
-	// 		System.out.println();
-	// 	}
-	// }
+	public static void print(int n) {
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j <= i; j++) {
+				System.out.print(fun_pascaltrianglevalue(i, j) + " ");
+			}
+			System.out.println();
+		}
+	}
  
-	public int fun_pascaltrianglevalue(int i, int j){
+	public static int fun_pascaltrianglevalue(int i, int j){
 		if (j == 0) {
 			return 1;
 		} else if (j == i) {
@@ -27,8 +27,8 @@ public class pascaltrianglevalue {
 			return fun_pascaltrianglevalue(i - 1, j - 1) + fun_pascaltrianglevalue(i - 1, j);
 		}
 	}
-	// public static void main(String[] args) {
-	// 	print(10);
-	// 	System.out.println(fun_pascaltrianglevalue(5, 2));
-	// }
+	public static void main(String[] args) {
+		print(10);
+		System.out.println(fun_pascaltrianglevalue(1, 1));
+	}
 }

@@ -20,6 +20,7 @@ public class TestJUnit {
    public void testCase1() {
       System.out.println("divya");
       pascaltrianglevalue s = new pascaltrianglevalue();
+      System.out.println("divya");
       assertEquals("1.", 1, s.fun_pascaltrianglevalue(1,1));
       assertEquals("2.", 0, s.fun_pascaltrianglevalue(3,5));
       assertEquals("3.", 3, s.fun_pascaltrianglevalue(3,1));
