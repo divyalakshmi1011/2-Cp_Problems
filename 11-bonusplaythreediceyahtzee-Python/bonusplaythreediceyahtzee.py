@@ -78,6 +78,8 @@ def playstep2(hand, dice):
 
 def bonusplaythreediceyahtzee(dice):
 	s = str(dice)
-	h = s[:5]
-	l = s[5:]
+	dice = int(s[:5])
+	hand = int(s[5:])
+	temp = playstep2(hand,dice)
+	print(temp)
 
