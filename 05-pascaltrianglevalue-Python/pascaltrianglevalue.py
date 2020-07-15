@@ -17,6 +17,8 @@ sys.setrecursionlimit(10**4)
 print(sys.getrecursionlimit())
 
 def fun_pascaltrianglevalue(row, col):
+	if(col > row + 1):
+		return 0
 	if col == row or col == 0 or row == 0:
 		return 1
 	else:
