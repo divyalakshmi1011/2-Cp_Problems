@@ -22,4 +22,10 @@ public class Queue{
 		this.front = this.front + 1; 
 		return item;
 	}
+	public static void main(String[] args) {
+		Queue q = new Queue(1);
+		q.enqueue(2);
+		q.enqueue(3);
+		System.out.println(q.dequeue());
+	}
 }
