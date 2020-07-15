@@ -17,14 +17,14 @@ def fun_fabricyards(inches):
 	x = inches/36
 	s = str(x)
 	l = s.split(".")
-	print(l)
-	if(l[0] == 0):
+	print("l",l)
+	if(int(l[0]) == 0):
 		return 1
 	else:
-		if(l[1] != 0):
+		if(int(l[1]) != 0):
 			return int(l[0]) + 1
 		else:
-			return int(l[1])
+			return int(l[0])
 
 def fun_fabricexcess(inches):
 	# your code goes here
@@ -36,5 +36,5 @@ def fun_fabricexcess(inches):
 	elif(z == inches):
 		return 0
 
-print(fun_fabricyards(108))
-print(fun_fabricexcess(100))
+print(fun_fabricyards(0))
+print(fun_fabricexcess(0))
