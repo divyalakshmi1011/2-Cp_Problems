@@ -40,53 +40,65 @@
 
 def playstep2(hand, dice):
     # your code goes here
-    st = str(hand)
-    arr = list(st)
-    dice_st = str(dice)
-    dice_list = list(dice_st)
-    if (arr[0] == arr[1]) and (arr[1] == arr[2]):
-        return hand
-    elif arr[0] == arr[1]:
-        arr.pop(2)
-        arr.append(dice_list.pop(-1))
-    elif arr[1] == arr[2]:
-        arr.pop(0)
-        arr.append(dice_list.pop(-1))
-    elif arr[0] == arr[2]:
-        arr.pop(1)
-        arr.append(dice_list.pop(-1))
-    else:
-        high = max(arr)
-        arr = [high, dice_list.pop(-1), dice_list.pop(-1)]
-    arr.sort(reverse=True)
-    s1 = ""
-    hand1 = s1.join(arr)
-    s2 = ""
-    dice1 = s2.join(dice_list)
-    # print(hand1)
-    return (int(hand1), int(dice1))
+	st = str(hand)
+	arr = list(st)
+	dice_st = str(dice)
+	dice_list = list(dice_st)
+	if (arr[0] == arr[1]) and (arr[1] == arr[2]):
+		return (hand,0)
+	elif arr[0] == arr[1]:
+		arr.pop(2)
+		arr.append(dice_list.pop(-1))
+	elif arr[1] == arr[2]:
+		arr.pop(0)
+		arr.append(dice_list.pop(-1))
+	elif arr[0] == arr[2]:
+		arr.pop(1)
+		arr.append(dice_list.pop(-1))
+	else:
+		high = max(arr)
+		arr = [high, dice_list.pop(-1), dice_list.pop(-1)]
+	if(len(dice_list) != 0):
+		arr.sort(reverse=True)
+		s1 = ""
+		hand1 = s1.join(arr)
+		s2 = ""
+		dice1 = s2.join(dice_list)
+		print(int(hand1),int(dice1))
+		return (int(hand1), int(dice1))
+	else:
+		arr.sort(reverse=True)
+		s1 = ""
+		hand1 = s1.join(arr)
+		print(int(hand1),0)
+		return (int(hand1), 0)
+
+
 
 def bonusplaythreediceyahtzee(dice):
 	s = str(dice)
 	dice = int(s[:4])
 	hand = int(s[4:])
 	x = playstep2(hand,dice)
-	# print(x)
+	print("xx",x)
 	# print(y)
 	a = playstep2(x[0],x[1])
 	# print(a)
 	h = a[0]
-	print(h)
+	# print(h)
 	j = str(h)
 	if(j[0] == j[1] == j[2]):
 		score = 20 + (3*int(j[0]))
 	elif(j[0] == j[1]):
-		score = 10 + int(j[0])
+		score = 10 + (2*int(j[0]))
 	elif(j[1] == j[2]):
-		score = 10 + int(j[1])
+		score = 10 + (2*int(j[1]))
 	elif(j[2] == j[0]):
-		score = 10 + int(j[2])
+		score = 10 + (2*int(j[2]))
 	else:
-		score = int(j[0]) + int(j[1]) + int(j[2])
-	return score
-print(bonusplaythreediceyahtzee(2333413))
+		score = max(int(j[0]) , int(j[1]) , int(j[2]))
+	return (h,score)
+
+print(bonusplaythreediceyahtzee(2333555))
+# print(bonusplaythreediceyahtzee(2315413))
+# print(bonusplaythreediceyahtzee(2333555))
