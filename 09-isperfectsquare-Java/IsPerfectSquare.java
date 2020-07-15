@@ -17,6 +17,6 @@ public class IsPerfectSquare {
 		}
    }
    public static void main(String[] args) {
-      System.out.println(isPerfectSquare(-100));
+      System.out.println(isPerfectSquare(0));
    }
 }
