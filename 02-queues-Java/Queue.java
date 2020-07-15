@@ -9,8 +9,8 @@ public class Queue{
 	}
 	
 	public void enqueue(int new_ele){
-			 this.rear = this.rear + 1;
-			 storage[rear] = new_ele;
+			//  this.rear = this.rear + 1;
+			 storage[rear++] = new_ele;
 	}
 
 	public int peek(){
@@ -26,6 +26,10 @@ public class Queue{
 		Queue q = new Queue(1);
 		q.enqueue(2);
 		q.enqueue(3);
+		System.out.println(q.dequeue());
+		q.enqueue(4);
+		System.out.println(q.dequeue());
+		System.out.println(q.dequeue());
 		System.out.println(q.dequeue());
 	}
 }
