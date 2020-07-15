@@ -7,10 +7,14 @@
 
 
 class nth_fibonacci {
-	public int fun_nthfibonaccinumber(int n){
+	public static int fun_nthfibonaccinumber(int n){
 		if(n <= 1) {
 			return n;
 		}
+		n = n + 1;
 		return fun_nthfibonaccinumber(n - 1) + fun_nthfibonaccinumber(n - 2);
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_nthfibonaccinumber(5));
 	}
 }
