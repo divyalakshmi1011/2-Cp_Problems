@@ -5,4 +5,9 @@
 
 def isperfectsquare(n):
 	# your code goes here
-	pass
+	if(isinstance(n,int)):
+		if(n%2 == 0):
+			return True
+	return False
+
+print(isperfectsquare("100"))
