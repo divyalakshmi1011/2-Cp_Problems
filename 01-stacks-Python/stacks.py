@@ -36,7 +36,7 @@ class LinkedList(object):
         if self.head:
             deleted = self.head
             self.head = self.head.next
-        return deleted.value
+        return deleted
 
 class stack(object):
     def __init__(self,top=None):
@@ -63,5 +63,5 @@ stack = stack(e1)
 # Test stack functionality
 stack.push(e2)
 stack.push(e3)
-print(stack.pop())
+print(stack.pop().value)
     
