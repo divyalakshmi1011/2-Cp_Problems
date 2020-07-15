@@ -13,6 +13,8 @@
 
 
 def fun_fabricyards(inches):
+	if(inches == 0):
+		return 0
 	# your code goes here
 	x = inches/36
 	s = str(x)
@@ -28,6 +30,8 @@ def fun_fabricyards(inches):
 
 def fun_fabricexcess(inches):
 	# your code goes here
+	if(inches == 0):
+		return 0
 	y = fun_fabricyards(inches)
 	z = y*36
 	print(z)
