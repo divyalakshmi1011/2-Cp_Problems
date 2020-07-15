@@ -39,48 +39,54 @@
 # assert(bonusPlayThreeDiceYahtzee(2333555) == (555, 35))
 
 def playstep2(hand, dice):
-	st = str(hand)
-	x = st[0]
-	y = st[1]
-	z = st[2]
-	if int(y) == int(z):
-		n = dice%10
-		dice = dice/10
-		if n > int(y):
-			s = int(str(n) + str(y) + str(y))
-			return (s, int(dice))
-		else:
-			s=int(str(y) + str(y) + str(n))
-			return (s, int(dice))
-	elif int(x) != int(y) != int(z):
-		n = dice%10
-		dice = dice//10
-		if n > int(x):
-			s = str(n)+x
-			n1 = dice%10
-			dice = dice//10
-			if n1 > n:
-				s = str(n1)+s
-				s = int(s)
-				return (s, dice)
-			elif n1 <= int(x):
-				s = s + str(n1)
-				s = int(s)
-				return (s,dice)
-		else:
-			s = x + str(n)
-			n1 = dice%10
-			dice = dice//10
-			if n1 < n:
-				s = s + str(n1)
-				s = int(s)
-				return(s,dice)
-
+    # your code goes here
+    st = str(hand)
+    arr = list(st)
+    dice_st = str(dice)
+    dice_list = list(dice_st)
+    if (arr[0] == arr[1]) and (arr[1] == arr[2]):
+        return hand
+    elif arr[0] == arr[1]:
+        arr.pop(2)
+        arr.append(dice_list.pop(-1))
+    elif arr[1] == arr[2]:
+        arr.pop(0)
+        arr.append(dice_list.pop(-1))
+    elif arr[0] == arr[2]:
+        arr.pop(1)
+        arr.append(dice_list.pop(-1))
+    else:
+        high = max(arr)
+        arr = [high, dice_list.pop(-1), dice_list.pop(-1)]
+    arr.sort(reverse=True)
+    s1 = ""
+    hand1 = s1.join(arr)
+    s2 = ""
+    dice1 = s2.join(dice_list)
+    # print(hand1)
+    return (int(hand1), int(dice1))
 
 def bonusplaythreediceyahtzee(dice):
 	s = str(dice)
 	dice = int(s[:4])
 	hand = int(s[4:])
-	x,y = playstep2(hand,dice)
-	print(x)
+	x = playstep2(hand,dice)
+	# print(x)
 	# print(y)
+	a = playstep2(x[0],x[1])
+	# print(a)
+	h = a[0]
+	print(h)
+	j = str(h)
+	if(j[0] == j[1] == j[2]):
+		score = 20 + int(j[0])
+	elif(j[0] == j[1]):
+		score = 10 + int(j[0])
+	elif(j[1] == j[2]):
+		score = 10 + int(j[1])
+	elif(j[2] == j[0]):
+		score = 10 + int(j[2])
+	else:
+		score = int(j[0]) + int(j[1]) + int(j[2])
+	return score
+print(bonusplaythreediceyahtzee(2333413))
