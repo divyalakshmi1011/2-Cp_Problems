@@ -12,12 +12,15 @@
 #     else:
 #         return combination(str(n-1, k-1)) + combination(str(n-1,k))
 
+import sys
+sys.setrecursionlimit(10**4) 
+print(sys.getrecursionlimit())
 
 def fun_pascaltrianglevalue(row, col):
-	if col == row or col == 0:
+	if col == row or col == 0 or row == 0:
 		return 1
 	else:
 		return fun_pascaltrianglevalue(row - 1, col - 1) + fun_pascaltrianglevalue(row - 1, col)
 
-print(fun_pascaltrianglevalue(5,2))
-
+print(fun_pascaltrianglevalue(3,5))
+# print(sys.getrecursionlimit())
