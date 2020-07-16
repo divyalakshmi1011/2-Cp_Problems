@@ -43,4 +43,4 @@ def fun_nth_happy_number(n):
 				return i
 		i = i + 1
 
-print(fun_nth_happy_number(6))
+print(fun_nth_happy_number(7))
