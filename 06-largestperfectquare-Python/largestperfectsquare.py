@@ -10,9 +10,9 @@
 def largestperfectsquare(n):
 	# your code goes here
 	i = 2
-	while (i ** 2 < n):
+	while (i ** 2 <= n):
 		print(i**2)
 		i = i + 1
 	return ((i-1) ** 2)
 
-print(largestperfectsquare(24))
+print(largestperfectsquare(5))
