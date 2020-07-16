@@ -42,6 +42,7 @@ def fun_applycaesarcipher(msg, shift):
 					print("shift",shift)
 					f = s1[::-1]
 					t += f[k]
+					print("fk",f[k])
 				else:
 					t += s1[index + shift]
 			elif(shift < 0):
