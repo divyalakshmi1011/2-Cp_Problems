@@ -29,7 +29,7 @@ public class TestJUnit {
    public void testCase2() {
       vowelscount s = new vowelscount();
       
-      assertEquals("1.", 4, s.fun_vowelscount("Hell123ooo"));
+      assertEquals("1.", 41, s.fun_vowelscount("Hell123ooo"));
       assertEquals("2.", 10, s.fun_vowelscount("aeiouAeiou  ")); 
    }
 }
