@@ -31,12 +31,13 @@ def fun_nth_happy_number(n):
 	if(n == 0):
 		return 1
 	i = 1
+	count = 0
 	while(i <= n):
 		print(i)
-		if(ishappynumber(i) and i == n):
-			print("bn",i)
-			return i
-		else:
-			i = i + 1
+		if(ishappynumber(i)):
+			count = count + 1
+			if(count == n):
+				return i
+		i = i + 1
 
 print(fun_nth_happy_number(6))
