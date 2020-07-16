@@ -4,6 +4,7 @@
 #       assert(smallestDifference([19,2,83,6,27]) == 4)
 # The two closest numbers in that list are 2 and 6, and their difference is 4.
 
+
 def smallestdifference(a):
 	diff = 10**20
 	n = len(a)
