@@ -18,7 +18,7 @@ def fun_applycaesarcipher(msg, shift):
 		if(msg[i] in s):
 			index = s.index(msg[i])
 			if(shift > 0):
-				if(index + shift > len(s)):
+				if(index + shift > len(s) - 1):
 					k = (index + shift) - len(s) - 1
 					f = s[::-1]
 					t += f[k]
@@ -57,6 +57,6 @@ def fun_applycaesarcipher(msg, shift):
 			t += msg[i]
 	return t
 
-print(fun_applycaesarcipher("ABCDXYZ",3))
+print(fun_applycaesarcipher("abcdxyz",3))
 
 
