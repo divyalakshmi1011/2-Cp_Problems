@@ -8,11 +8,13 @@ def rotate(input,d):
     Lsecond = input[d :] 
     Rfirst = input[0 : len(input)-d] 
     Rsecond = input[len(input)-d : ] 
-    return (Lfirst+Lsecond)
+    return (Lsecond + Lfirst)
 
 
 
 def isrotated(str1, str2):
+	if(str1[::-1] == str2):
+		return True
 	for i in range(len(str1)):
 		d = rotate(str1,i)
 		print(d,i)
