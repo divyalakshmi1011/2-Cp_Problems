@@ -36,5 +36,4 @@ def fun_nth_happy_number(n):
 			else:
 				i = i + 1
 		else: i = i + 1
-
-	return 0
+print(fun_nth_happy_number(6))
