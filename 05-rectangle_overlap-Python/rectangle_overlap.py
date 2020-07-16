@@ -15,5 +15,5 @@ def isRectangleOverlap(rec1, rec2):
                     rec1[0] >= rec2[2] or  # right
                     rec1[1] >= rec2[3])    # top
     
-print(isRectangleOverlap([0,2,1,4],[1,6,8,4]))
+print(isRectangleOverlap([0,0,1,4],[1,4,1,2]))
 print("divya")
