@@ -23,3 +23,5 @@ def matrixadd(L, M):
 			row.append(L[i][j]+M[i][j])
 			res.append(row)
 	return res
+
+print(matrixadd([[1,2,3],[4,5,6]],[[21,22,23],[24,25,26]]))
