@@ -7,6 +7,6 @@ def removeduplicate(text):
 	# Your code goes here
 	l = list(text)
 	s = set(l)
-	print(s)
+	print(l)
 
 removeduplicate("javapython")
