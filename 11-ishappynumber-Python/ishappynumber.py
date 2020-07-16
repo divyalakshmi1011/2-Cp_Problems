@@ -16,4 +16,17 @@
 
 def ishappynumber(n):
 	# your code goes here
+	s = str(n)
+	if(len(s) == 1):
+		return False
+	else:
+		while(len(s) > 1):
+			sum = 0
+			for item in s:
+				sum += ((int(item)) ** 2)
+			s = str(sum)
+		if(int(s) == 1):
+			return True
+		else:
+			False
 	pass
