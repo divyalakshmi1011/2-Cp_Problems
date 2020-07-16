@@ -18,8 +18,10 @@ def fun_applycaesarcipher(msg, shift):
 		if(msg[i] in s):
 			index = s.index(msg[i])
 			if(shift > 0):
-				if(msg[i] == 'z'):
-					t += 'a'
+				if(index + shift > len(s)):
+					k = (index + shift) - len(s) - 1
+					f = s[::-1]
+					t += f[k]
 				else:
 					t += s[index + shift]
 			elif(shift < 0):
@@ -32,12 +34,14 @@ def fun_applycaesarcipher(msg, shift):
 		elif(msg[i] in s1):
 			index = s1.index(msg[i])
 			if(shift > 0):
-				if(msg[i] == 'z'):
-					t += 'a'
+				if(index + shift >= len(s1)):
+					k = (index + shift) - len(s1) - 1
+					f = s1[::-1]
+					t += f[k]
 				else:
 					t += s1[index + shift]
 			elif(shift < 0):
-				if(msg[i] == 'a'):
+				if(msg[i] == 'A'):
 					f = s1[::-1]
 					t += f[abs(shift + 1)]
 				else:
@@ -47,6 +51,6 @@ def fun_applycaesarcipher(msg, shift):
 			t += msg[i]
 	return t
 
-print(fun_applycaesarcipher("We Attack At Dawn",1))
+print(fun_applycaesarcipher("ABCDXYZ",3))
 
 
