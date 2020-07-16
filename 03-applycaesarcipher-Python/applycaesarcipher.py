@@ -19,7 +19,7 @@ def fun_applycaesarcipher(msg, shift):
 			index = s.index(msg[i])
 			if(shift > 0):
 				if(index + shift > len(s) - 1):
-					k = (index + shift) - len(s) - 1
+					k = (index + shift) - len(s)
 					f = s[::-1]
 					t += s[k]
 				else:
