@@ -28,12 +28,13 @@ def ishappynumber(n):
 			return False
 
 def fun_nth_happy_number(n):
-	i = 0
+	if(n == 0):
+		return 1
+	i = 1
 	while(i <= n):
-		if(ishappynumber(i)):
-			if(i == n):
-				return i
-			else:
-				i = i + 1
-		else: i = i + 1
+		if(ishappynumber(i) and i == n):
+			return i
+		else:
+			i = i + 1
+
 print(fun_nth_happy_number(6))
