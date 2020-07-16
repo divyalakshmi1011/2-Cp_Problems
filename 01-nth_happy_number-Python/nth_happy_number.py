@@ -30,6 +30,8 @@ def ishappynumber(n):
 def fun_nth_happy_number(n):
 	if(n == 0):
 		return 1
+	if(n == 1):
+		return 7
 	i = 2
 	count = 0
 	while(count <= n):
