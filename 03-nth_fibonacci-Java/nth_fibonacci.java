@@ -18,6 +18,6 @@ class nth_fibonacci {
 		return fun_nthfibonaccinumber(n - 1) + fun_nthfibonaccinumber(n - 2);
 	}
 	public static void main(String[] args) {
-		System.out.println(fun_nthfibonaccinumber(5));
+		System.out.println(fun_nthfibonaccinumber(11));
 	}
 }
