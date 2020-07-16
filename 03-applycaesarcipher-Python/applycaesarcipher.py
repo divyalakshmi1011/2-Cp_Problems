@@ -21,7 +21,7 @@ def fun_applycaesarcipher(msg, shift):
 				if(index + shift > len(s) - 1):
 					k = (index + shift) - len(s) - 1
 					f = s[::-1]
-					t += f[k]
+					t += s[k]
 				else:
 					t += s[index + shift]
 			elif(shift < 0):
