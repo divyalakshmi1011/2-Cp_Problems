@@ -5,5 +5,7 @@
 
 
 def fun_replace(s1, s2, s3):
-	return s1
+	print(s1.replace(s2,s3))
+	# return s1
 
+fun_replace("abc","def","ghi")
