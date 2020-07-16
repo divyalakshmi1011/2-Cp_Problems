@@ -33,11 +33,11 @@ def fun_nth_happy_prime(n):
 	count = 1
 	while(count <= n):
 		print(i)
-		if(ishappynumber(i)):
+		if(ishappynumber(i) and prime(i)):
 			print("bnm",i)
 			count = count + 1
 			if(count == n):
 				return i
 		i = i + 1
 
-print(fun_nth_happy_prime(7))
+print(fun_nth_happy_prime(4))
