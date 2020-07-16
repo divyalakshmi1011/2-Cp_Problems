@@ -17,7 +17,8 @@ def mostfrequentdigit(n):
             freq[item] += 1
         else: 
             freq[item] = 1
-    x = max(freq, key=freq.get)
+    l = list(freq.values())
+    x = max(l)
     return get_key(x,freq)
 
-print(mostfrequentdigit(11223344))
+print(mostfrequentdigit(5231123123123))
