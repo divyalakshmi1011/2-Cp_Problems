@@ -5,10 +5,15 @@
 
 
 def isrotated(str1, str2):
-	d = str1[::-1]
-	if(d == str2):
-		return True
-	else:
-		return False
+	l = len(str1)
+	r = str1[::-1]
+	for i in range(l):
+		a = r[i]
+		b = r[:i]
+		c = r[i:]
+		if(a+c+b == str2):
+			return True
+	return False
+
 
 print(isrotated("12345","54321"))
