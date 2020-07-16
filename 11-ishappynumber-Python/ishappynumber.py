@@ -28,6 +28,6 @@ def ishappynumber(n):
 		if(int(s) == 1):
 			return True
 		else:
-			False
+			return False
 
-print(ishappynumber(98))
+print(ishappynumber(9))
