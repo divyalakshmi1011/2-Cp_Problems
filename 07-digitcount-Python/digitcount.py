@@ -17,4 +17,4 @@ def digitcount(n):
 		count = count + 1
 	return count
 
-print(digitcount(-111))
+print(digitcount(-5231123123123))
