@@ -9,11 +9,12 @@ def isrotated(str1, str2):
 	r = str1[::-1]
 	for i in range(l):
 		a = r[i]
-		b = r[:i]
-		c = r[i:]
+		b = str1[:i]
+		c = str1[i + 1:]
+		print(a,b,c)
 		if(a+c+b == str2):
 			return True
 	return False
 
 
-print(isrotated("12345","54321"))
+print(isrotated("XYZ","ZXY"))
