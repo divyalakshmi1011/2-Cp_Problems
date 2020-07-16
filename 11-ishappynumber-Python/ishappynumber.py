@@ -19,7 +19,7 @@ def ishappynumber(n):
 	s = str(n)
 	if(n == 1):
 		return True
-	if(len(s) == 1):
+	if(len(s) == 1 or n < 0):
 		return False
 	else:
 		while(len(s) > 1):
