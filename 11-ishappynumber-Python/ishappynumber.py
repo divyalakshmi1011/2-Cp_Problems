@@ -29,4 +29,5 @@ def ishappynumber(n):
 			return True
 		else:
 			False
-	pass
+
+print(ishappynumber(97))
