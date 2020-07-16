@@ -10,13 +10,15 @@ def get_key(val,freq):
 
 def mostfrequentdigit(n):
 	# Creating an empty dictionary
-    my_list = [int(x) for x in str(n)] 
+    my_list = [int(x) for x in str(n)]
+    sorted(my_list)
     freq = {} 
     for item in my_list: 
         if (item in freq): 
             freq[item] += 1
         else: 
             freq[item] = 1
+    # freq = sorted (freq.keys())
     l = list(freq.values())
     x = max(l)
     return get_key(x,freq)
