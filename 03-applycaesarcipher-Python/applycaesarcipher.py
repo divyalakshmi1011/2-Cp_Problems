@@ -29,10 +29,24 @@ def fun_applycaesarcipher(msg, shift):
 				else:
 					print(i,shift)
 					t += s[index + shift]
+		elif(msg[i] in s1):
+			index = s1.index(msg[i])
+			if(shift > 0):
+				if(msg[i] == 'z'):
+					t += 'a'
+				else:
+					t += s1[index + shift]
+			elif(shift < 0):
+				if(msg[i] == 'a'):
+					f = s1[::-1]
+					t += f[abs(shift + 1)]
+				else:
+					print(i,shift)
+					t += s1[index + shift]
 		else:
 			t += msg[i]
 	return t
 
-print(fun_applycaesarcipher("zodiac",-2))
+print(fun_applycaesarcipher("We Attack At Dawn",1))
 
 
