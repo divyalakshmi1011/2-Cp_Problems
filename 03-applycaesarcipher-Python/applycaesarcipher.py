@@ -27,7 +27,8 @@ def fun_applycaesarcipher(msg, shift):
 					t += f[abs(shift)]
 				else:
 					t += s[i - shift]
-
+		else:
+			t += msg[i]
 	return t
 
 
