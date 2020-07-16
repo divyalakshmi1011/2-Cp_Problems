@@ -26,10 +26,8 @@ def ishappynumber(n):
 
 def fun_nth_happy_prime(n):
 	if(n == 0):
-		return 1
-	if(n == 1):
 		return 7
-	i = 2
+	i = 8
 	count = 0
 	while(count <= n):
 		print(i)
@@ -40,4 +38,4 @@ def fun_nth_happy_prime(n):
 				return i
 		i = i + 1
 
-print(fun_nth_happy_prime(4))
+print(fun_nth_happy_prime(1))
