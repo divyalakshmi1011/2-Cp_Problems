@@ -5,9 +5,10 @@
 
 def median(a):
 	n_num = list(a)
-	n = len(n_num) 
+	n = len(n_num)
+	if(n == 0):
+		return None
 	n_num.sort() 
-  
 	if n % 2 == 0: 
 		median1 = n_num[n//2] 
 		median2 = n_num[n//2 - 1] 
