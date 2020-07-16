@@ -8,7 +8,15 @@ import java.util.*;
 public class SmallestDifference {
 
     public int smallestDifference(int[] a) {
-        // Your code goes here
-        return -1;
+        int n = a.length;
+        int sum = 10^2;
+        for(int i = 0; i < n -1;i++){
+            for(int j = 0; j < n;j++){
+                if(sum < (a[i] - a[j])) {
+                    sum = (a[i] - a[j]);
+                }
+            }
+        }
+        return sum;
     }
 }
