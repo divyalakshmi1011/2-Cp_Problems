@@ -5,4 +5,8 @@
 
 def removeduplicate(text):
 	# Your code goes here
-	pass
+	l = list(text)
+	s = set(l)
+	print(s)
+
+removeduplicate("javapython")
