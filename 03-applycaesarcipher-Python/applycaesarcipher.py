@@ -31,4 +31,6 @@ def fun_applycaesarcipher(msg, shift):
 			t += msg[i]
 	return t
 
+print(fun_applycaesarcipher("abcd4",2))
+
 
