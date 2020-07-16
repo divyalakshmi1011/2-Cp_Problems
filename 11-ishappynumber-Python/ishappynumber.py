@@ -32,4 +32,4 @@ def ishappynumber(n):
 		else:
 			return False
 
-print(ishappynumber(9))
+print(ishappynumber(404))
