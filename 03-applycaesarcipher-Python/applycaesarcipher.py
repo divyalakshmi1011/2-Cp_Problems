@@ -11,8 +11,23 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
+	s = 'abcdefghijklmnopqrstuvwxyz'
+	s1 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+	t = ''
+	for i in range(len(msg)):
+		if(msg[i] in s):
+			if(shift > 0):
+				if(msg[i] == 'z'):
+					t += 'a'
+				else:
+					t += s[i + shift]
+			elif(shift < 0):
+				if(msg[i] == 'a'):
+					f = s[::-1]
+					t += f[abs(shift)]
+				else:
+					t += s[i - shift]
 
-
+	return t
 
 
