@@ -22,5 +22,5 @@ def removeduplicate(text):
 			str[index] = str[i] 
 			index += 1
 	return "".join(str[:index])
-	
-removeduplicate("javapython")
+
+print(removeduplicate("javapython"))
