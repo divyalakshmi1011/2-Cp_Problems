@@ -13,10 +13,11 @@ def fun_interleave(s1,s2):
 	n = max(l1,l2)
 	k = ""
 	for i in range(n):
-		if(i >= l1 | i >= l2):
-			k += ''
-		else:
+		if(i < l1):
 			k += s1[i]
+		if(i < l2):
 			k += s2[i]
 	return k
+
+print(fun_interleave('pto', 'yhn'))
 	
