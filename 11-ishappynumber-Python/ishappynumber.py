@@ -17,6 +17,8 @@
 def ishappynumber(n):
 	# your code goes here
 	s = str(n)
+	if(n == 1):
+		return True
 	if(len(s) == 1):
 		return False
 	else:
