@@ -16,21 +16,23 @@ def fun_applycaesarcipher(msg, shift):
 	t = ''
 	for i in range(len(msg)):
 		if(msg[i] in s):
+			index = s.index(msg[i])
 			if(shift > 0):
 				if(msg[i] == 'z'):
 					t += 'a'
 				else:
-					t += s[i + shift]
+					t += s[index + shift]
 			elif(shift < 0):
 				if(msg[i] == 'a'):
 					f = s[::-1]
 					t += f[abs(shift + 1)]
 				else:
-					t += s[i - shift]
+					print(i,shift)
+					t += s[index + shift]
 		else:
 			t += msg[i]
 	return t
 
-print(fun_applycaesarcipher("abcd4",-2))
+print(fun_applycaesarcipher("zodiac",-2))
 
 
