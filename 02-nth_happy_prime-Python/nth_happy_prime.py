@@ -30,7 +30,7 @@ def fun_nth_happy_prime(n):
 	if(n == 1):
 		return 7
 	i = 2
-	count = 1
+	count = 0
 	while(count <= n):
 		print(i)
 		if(ishappynumber(i) and prime(i)):
