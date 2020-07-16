@@ -9,7 +9,32 @@
 # assert(nthHappyNumber(5) == 23)
 # assert(nthHappyNumber(6) == 28)
 # assert(nthHappyNumber(7) == 31)
-
+def ishappynumber(n):
+	# your code goes here
+	s = str(n)
+	if(n == 1):
+		return True
+	if(len(s) == 1 or n < 0):
+		return False
+	else:
+		while(len(s) > 1):
+			sum = 0
+			for item in s:
+				sum += ((int(item)) ** 2)
+			s = str(sum)
+		if(int(s) == 1):
+			return True
+		else:
+			return False
 
 def fun_nth_happy_number(n):
+	i = 0
+	while(i <= n):
+		if(ishappynumber(i)):
+			if(i == n):
+				return i
+			else:
+				i = i + 1
+		else: i = i + 1
+
 	return 0
