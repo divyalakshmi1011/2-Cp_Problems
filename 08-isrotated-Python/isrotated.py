@@ -15,7 +15,7 @@ def rotate(input,d):
 def isrotated(str1, str2):
 	for i in range(len(str1)):
 		d = rotate(str1,i)
-		print(d)
+		print(d,i)
 		if(d == str2):
 			return True
 	return False
