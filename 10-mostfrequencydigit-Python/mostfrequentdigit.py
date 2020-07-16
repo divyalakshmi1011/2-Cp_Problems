@@ -20,4 +20,4 @@ def mostfrequentdigit(n):
     x = max(freq, key=freq.get)
     return get_key(x,freq)
 
-print(mostfrequentdigit(1223344))
+print(mostfrequentdigit(11223344))
