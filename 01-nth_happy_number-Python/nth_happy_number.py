@@ -32,7 +32,7 @@ def fun_nth_happy_number(n):
 		return 1
 	i = 1
 	count = 0
-	while(i <= n):
+	while(count <= n):
 		print(i)
 		if(ishappynumber(i)):
 			print("bnm",i)
@@ -41,4 +41,4 @@ def fun_nth_happy_number(n):
 				return i
 		i = i + 1
 
-print(fun_nth_happy_number(6))
+print(fun_nth_happy_number(1))
