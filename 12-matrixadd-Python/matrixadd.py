@@ -16,5 +16,10 @@
 # cannot be added because they are of different dimensions.
 
 def matrixadd(L, M):
-	# Your code goes here
-	pass
+	res = []
+	for i in range(len(L)):
+		row = []
+		for j in range(len(L[0])):
+			row.append(L[i][j]+M[i][j])
+			res.append(row)
+	return res
