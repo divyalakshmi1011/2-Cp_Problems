@@ -24,13 +24,13 @@ def fun_applycaesarcipher(msg, shift):
 			elif(shift < 0):
 				if(msg[i] == 'a'):
 					f = s[::-1]
-					t += f[abs(shift)]
+					t += f[abs(shift + 1)]
 				else:
 					t += s[i - shift]
 		else:
 			t += msg[i]
 	return t
 
-print(fun_applycaesarcipher("abcd4",2))
+print(fun_applycaesarcipher("abcd4",-2))
 
 
