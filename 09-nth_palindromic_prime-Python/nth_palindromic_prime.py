@@ -35,3 +35,5 @@ def fun_nth_palindromic_prime(n):
 				i = i + 1
 		i = i + 1
 	return i
+
+print(fun_nth_palindromic_prime(0))
