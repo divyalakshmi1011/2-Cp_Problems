@@ -20,27 +20,34 @@ def isprime(n):
 
 def isadditive(n):
 	s = str(n)
+	sum = 0
 	for i in s:
-		t = int(i)
-		x = isprime(t)
-		print(x,t)
-		if(x == False):
-			return False
-	return True
+		sum += int(i)
+	if(isprime(sum)):
+		return True
+	else:
+		return False
 
 def fun_nth_additive_prime(n):
 	if(n == 0):
 		return 2
 	i = 3
 	count = 0
-	while(i <= n):
+	while(count <= n):
 		if(isprime(i) and isadditive(i)):
-			print("divya",i)
+			# print("divya",i)
 			count = count + 1
 			if(count == n):
 				break
 			else:
 				i = i + 1
-		return i
+		i = i + 1
+	return i
 
+print(fun_nth_additive_prime(0))
+print(fun_nth_additive_prime(1))
+print(fun_nth_additive_prime(2))
 print(fun_nth_additive_prime(3))
+print(fun_nth_additive_prime(4))
+print(fun_nth_additive_prime(5))
+print(fun_nth_additive_prime(6))
