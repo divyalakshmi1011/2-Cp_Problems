@@ -23,7 +23,7 @@ public class BinaryTree {
 
 	private boolean search_Node(Node temp, int value) {
 		if(root == null){  
-			return false;
+		     flag = false;
 		  }  
 		  else{  
 			//If value is found in the given binary tree then, set the flag to true  
@@ -48,6 +48,6 @@ public class BinaryTree {
 		s.root.right = new Node(3);
 		s.root.left.left = new Node(4);
 		s.root.left.right = new Node(5);
-		System.out.println(s.search(4));
+		System.out.println(s.search(10));
 	}
 }
