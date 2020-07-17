@@ -35,9 +35,12 @@ def fun_nth_additive_prime(n):
 	count = 0
 	while(i <= n):
 		if(isprime(i) and isadditive(i)):
+			print("divya",i)
 			count = count + 1
 			if(count == n):
-				return i
-		i = i + 1
+				break
+			else:
+				i = i + 1
+		return i
 
-print(fun_nth_additive_prime(1))
+print(fun_nth_additive_prime(3))
