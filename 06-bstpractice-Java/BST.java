@@ -58,7 +58,7 @@ public class BST {
       }
       public static void main(String[] args) {
         BST s = new BST(4);
-        System.out.println(s.search(4));
+        System.out.println(s.search(1));
       }  
 
 }
