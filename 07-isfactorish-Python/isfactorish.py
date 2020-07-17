@@ -12,5 +12,17 @@
 
 
 def fun_isfactorish(n):
-	return False
+	s = str(n)
+	if(len(s) != 0):
+		return False
+	if('0' in s):
+		return False
+	if(len(n) != len(set(n))):
+		return False
+	for item in s:
+		if(n%int(item) != 0):
+			return False
+	return True
+
+print(fun_isfactorish(412))
 
