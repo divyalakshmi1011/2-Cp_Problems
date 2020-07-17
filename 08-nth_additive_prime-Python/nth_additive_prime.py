@@ -4,7 +4,16 @@
 # is also prime, so 113 is an Additive Prime. fun_nth_additive_prime(0) returns 2
 
 
-
+def isprime(n):
+	i = 1
+	count = 0
+	while(i <= n):
+		if(n%i == 0):
+			count = count + 1
+	if(count == 2):
+		return True
+	else:
+		False
 
 def fun_nth_additive_prime(n):
 	return 1
