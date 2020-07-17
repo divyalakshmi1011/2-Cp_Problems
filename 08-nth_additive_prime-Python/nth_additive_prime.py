@@ -10,10 +10,25 @@ def isprime(n):
 	while(i <= n):
 		if(n%i == 0):
 			count = count + 1
+		i = i + 1
 	if(count == 2):
 		return True
 	else:
-		False
+		return False
+
+def isadditive(n):
+	s = str(n)
+	for i in s:
+		t = int(i)
+		x = isprime(t)
+		if(x == False):
+			return False
+	return True
 
 def fun_nth_additive_prime(n):
-	return 1
+	if(isprime(n) and isadditive(n)):
+		return True
+	else:
+		return False
+
+print(fun_nth_additive_prime(113))
