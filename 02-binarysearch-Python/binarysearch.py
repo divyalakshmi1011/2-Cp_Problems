@@ -22,3 +22,6 @@ def binary_search(input_array, value):
             low = mid + 1
         else:
             return mid
+    return -1
+
+print(binary_search([1,2,3,4,5,6],4))
