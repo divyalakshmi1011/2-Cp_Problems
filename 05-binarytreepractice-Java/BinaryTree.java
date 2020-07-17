@@ -11,7 +11,8 @@ class Node {
 
 public class BinaryTree {
 	public Node root;
-	
+	public static boolean flag = false;  
+
 	public BinaryTree(int value) {
 		this.root = new Node(value);
 	}
@@ -20,23 +21,26 @@ public class BinaryTree {
 		return search_Node(this.root, value);
 	}
 
-	private boolean search_Node(Node r, int val) {
-		boolean found = false;
-         while ((r != null) && !found)
-         {
-             int rval = r.value;
-             if (val < rval)
-                 r = r.left;
-             else if (val > rval)
-                 r = r.right;
-             else
-             {
-                 found = true;
-                 break;
-             }
-             found = search_Node(r, val);
-         }
-         return found;
+	private boolean search_Node(Node temp, int value) {
+		if(root == null){  
+			return false;
+		  }  
+		  else{  
+			//If value is found in the given binary tree then, set the flag to true  
+			if(temp.value == value){  
+			  flag = true;   
+			}  
+			//Search in left subtree  
+			if(flag == false && temp.left != null){  
+			   search_Node(temp.left, value);  
+			}  
+			//Search in right subtree  
+			if(flag == false && temp.right != null){  
+			   search_Node(temp.right, value);  
+			}  
+
+		  }
+		  return flag;  
 	}
 	public static void main(String[] args){
 		BinaryTree s = new BinaryTree(1);
