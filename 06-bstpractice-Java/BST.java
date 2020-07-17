@@ -17,11 +17,20 @@ public class BST {
     }
 
     public void insert(int value) {
-    	// Your code goes here
+      // Your code goes here
+      Node x = this.root;
+      this.root = insert(x,value);
     }
 
-    private void insert(Node node, int value) {
-    	// Your code goes here
+    private Node insert(Node node, int value) {
+    	if(value < node.value) {
+        node.left = insert(node.left,value);
+      } else if(value > node.value) {
+        node.right = insert(node.right,value);
+      } else {
+        node.value = value;
+      }
+      return node;
     }
 
     public boolean search(int value) {
