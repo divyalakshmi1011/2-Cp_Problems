@@ -5,6 +5,8 @@
 
 
 def isprime(n):
+	if(n == 1):
+		return True
 	i = 1
 	count = 0
 	while(i <= n):
@@ -27,9 +29,15 @@ def isadditive(n):
 	return True
 
 def fun_nth_additive_prime(n):
-	if(isprime(n) and isadditive(n)):
-		return True
-	else:
-		return False
+	if(n == 0):
+		return 2
+	i = 3
+	count = 0
+	while(i <= n):
+		if(isprime(i) and isadditive(i)):
+			count = count + 1
+			if(count == n):
+				return i
+		i = i + 1
 
-print(fun_nth_additive_prime(113))
+print(fun_nth_additive_prime(1))
