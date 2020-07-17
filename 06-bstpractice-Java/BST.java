@@ -11,7 +11,7 @@ class Node {
 
 public class BST {
     public Node root;
-    
+    public static boolean flag = false; 
     public BST(int value) {
         this.root = new Node(value);
     }
@@ -25,13 +25,27 @@ public class BST {
     }
 
     public boolean search(int value) {
-    	// Your code goes here
-    	return false;
-    }
+		flag = false;
+		searchNode(this.root, value);
+		return flag;
+	}
 
-    private boolean search(Node current, int value) {
-    	// Your code goes here
-    	return false;
-    }
+	public void searchNode(Node temp, int value){  
+        if(root == null){  
+          System.out.println("Tree is empty");  
+        }  
+        else{  
+          if(temp.value == value){  
+            flag = true;  
+               return;  
+          }   
+          if(flag == false && temp.left != null){  
+             searchNode(temp.left, value);  
+          }
+          if(flag == false && temp.right != null){  
+             searchNode(temp.right, value);  
+          }  
+        }  
+      }  
 
 }
