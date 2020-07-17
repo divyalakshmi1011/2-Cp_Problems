@@ -5,6 +5,33 @@
 
 
 
-
+def isprime(n):
+	if(n == 1):
+		return True
+	i = 1
+	count = 0
+	while(i <= n):
+		if(n%i == 0):
+			count = count + 1
+		i = i + 1
+	if(count == 2):
+		return True
+	else:
+		return False
 def fun_nth_palindromic_prime(n):
-	return 0
+	s = str(n)
+	r = s[::-1]
+	if(n == 0):
+		return 2
+	i = 3
+	count = 0
+	while(count <= n):
+		if(isprime(i) and s == r):
+			# print("divya",i)
+			count = count + 1
+			if(count == n):
+				break
+			else:
+				i = i + 1
+		i = i + 1
+	return i
