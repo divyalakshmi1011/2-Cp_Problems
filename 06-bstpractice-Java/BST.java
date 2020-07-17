@@ -55,6 +55,10 @@ public class BST {
              searchNode(temp.right, value);  
           }  
         }  
+      }
+      public static void main(String[] args) {
+        BST s = new BST(4);
+        System.out.println(s.search(4));
       }  
 
 }
