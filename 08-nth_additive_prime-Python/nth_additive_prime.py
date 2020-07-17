@@ -21,6 +21,7 @@ def isadditive(n):
 	for i in s:
 		t = int(i)
 		x = isprime(t)
+		print(x,t)
 		if(x == False):
 			return False
 	return True
