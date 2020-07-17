@@ -4,11 +4,8 @@ Output a sorted list."""
 def quicksort(array):
 	start = 0
 	end = len(array) - 1
-	if start >= end:
-		return
-		p = partition(array, start, end)
-		quicksort(array, start, p-1)
-		quicksort(array, p+1, end)
+	quick_sort(array,start,end)
+	return array
 
 def partition(array, start, end):
     pivot = array[start]
@@ -27,8 +24,13 @@ def partition(array, start, end):
     array[start], array[high] = array[high], array[start]
     return high
 
-	
-array = [29,99,27,41,66,28,44,78,87,19,31,76,58,88,83,97,12,21,44]
 
-quicksort(array)
-print(array)
+def quick_sort(array, start, end):
+    if start >= end:
+        return
+    p = partition(array, start, end)
+    quick_sort(array, start, p-1)
+    quick_sort(array, p+1, end)
+	
+
+print(quicksort([21, 4, 1, 3, 9, 20, 25, 6, 21, 14]))
