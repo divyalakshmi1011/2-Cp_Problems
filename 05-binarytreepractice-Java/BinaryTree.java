@@ -13,7 +13,7 @@ public class BinaryTree {
 	public Node root;
 	
 	public BinaryTree(int value) {
-		this.root.value = value;
+		this.root = new Node(value);
 	}
 
 	public boolean search(int value) {
