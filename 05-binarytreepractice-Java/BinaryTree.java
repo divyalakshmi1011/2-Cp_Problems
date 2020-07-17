@@ -24,21 +24,17 @@ public class BinaryTree {
 	}
 
 	public void searchNode(Node temp, int value){  
-        //Check whether tree is empty  
         if(root == null){  
           System.out.println("Tree is empty");  
         }  
         else{  
-          //If value is found in the given binary tree then, set the flag to true  
           if(temp.value == value){  
             flag = true;  
                return;  
-          }  
-          //Search in left subtree  
+          }   
           if(flag == false && temp.left != null){  
              searchNode(temp.left, value);  
-          }  
-          //Search in right subtree  
+          }
           if(flag == false && temp.right != null){  
              searchNode(temp.right, value);  
           }  
