@@ -9,11 +9,16 @@ class BinaryTree(object):
         self.root = Node(root)
 
     def search(self, find_val):
-        """Return True if the value
-        is in the tree, return
-        False otherwise."""
-        # Your code goes here
-        pass
+        if find_val < self.root.value:
+            if self.left is None:
+                return False
+            return self.left.serach(find_val)
+        elif find_val > self.root.value:
+            if self.right is None:
+                return False
+            return self.right.findval(find_val)
+        else:
+            return self.root.value
 
     def print_tree(self):
         """Print out all tree nodes
@@ -33,3 +38,10 @@ class BinaryTree(object):
         recursive print solution."""
         # Your code goes here
         pass
+
+    tree = BinaryTree(1)
+    tree.root.left = Node(2)
+    tree.root.right = Node(3)
+    tree.root.left.left = Node(4)
+    tree.root.left.right = Node(5)
+    print(tree.search(4))
