@@ -12,7 +12,7 @@
 
 
 def fun_isfactorish(n):
-	s = str(n)
+	s = str(abs(n))
 	if(len(s) != 3):
 		print("divya",1)
 		return False
