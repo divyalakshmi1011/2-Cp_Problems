@@ -59,6 +59,11 @@ public class BST {
       public static void main(String[] args) {
         BST s = new BST(4);
         System.out.println(s.search(1));
+        s.insert(2);
+        s.insert(1);
+        s.insert(3);
+        s.insert(5);
+        System.out.println(s.search(1));
       }  
 
 }
