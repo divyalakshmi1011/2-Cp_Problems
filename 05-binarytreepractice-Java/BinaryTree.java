@@ -48,6 +48,6 @@ public class BinaryTree {
 		s.root.right = new Node(3);
 		s.root.left.left = new Node(4);
 		s.root.left.right = new Node(5);
-		System.out.println(s.search(10));
+		System.out.println(s.search(2));
 	}
 }
