@@ -13,16 +13,20 @@
 
 def fun_isfactorish(n):
 	s = str(n)
-	if(len(s) != 0):
+	if(len(s) != 3):
+		print("divya",1)
 		return False
 	if('0' in s):
+		print("divya",2)
 		return False
-	if(len(n) != len(set(n))):
+	if(len(s) != len(set(s))):
+		print("divya",3)
 		return False
 	for item in s:
 		if(n%int(item) != 0):
+			print("divya",4)
 			return False
 	return True
 
-print(fun_isfactorish(412))
+print(fun_isfactorish(-412))
 
