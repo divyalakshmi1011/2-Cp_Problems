@@ -11,35 +11,25 @@ class Node {
 
 public class BinaryTree {
 	public Node root;
-	public static boolean flag = false;  
-
 	public BinaryTree(int value) {
 		this.root = new Node(value);
 	}
-
-	public boolean search(int value) {
-		flag = false;
-		searchNode(this.root, value);
-		return flag;
+    public boolean search(int value) {
+		Node x = this.root;
+		return searchNode(x, value);
 	}
+	public boolean searchNode(Node node,int value) {
+		if (node == null)  
+          return false;  
+		if (node.value == value)  
+			return true;  
+		boolean res1 = searchNode(node.left, value);  
+		if(res1) return true;
+		boolean res2 = searchNode(node.right, value);  
+		return res2;
+		}
 
-	public void searchNode(Node temp, int value){  
-        if(root == null){  
-          System.out.println("Tree is empty");  
-        }  
-        else{  
-          if(temp.value == value){  
-            flag = true;  
-               return;  
-          }   
-          if(flag == false && temp.left != null){  
-             searchNode(temp.left, value);  
-          }
-          if(flag == false && temp.right != null){  
-             searchNode(temp.right, value);  
-          }  
-        }  
-      }  
+	
 	public static void main(String[] args){
 		BinaryTree s = new BinaryTree(1);
 		s.root.left = new Node(2);
