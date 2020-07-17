@@ -18,11 +18,14 @@ public class BST {
 
     public void insert(int value) {
       // Your code goes here
+      // System.out.println("divya");
       Node x = this.root;
       this.root = insert(x,value);
     }
 
     private Node insert(Node node, int value) {
+      // System.out.println("divya");
+      if (node == null) return new Node(value);
     	if(value < node.value) {
         node.left = insert(node.left,value);
       } else if(value > node.value) {
