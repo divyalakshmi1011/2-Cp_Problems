@@ -27,4 +27,4 @@ def lookandsay(a):
             count += 1
     return result
 
-print(lookandsay([3,3,8,3,3,3,3]))
+print(lookandsay([3,3,8,-10,-10,-10]))
