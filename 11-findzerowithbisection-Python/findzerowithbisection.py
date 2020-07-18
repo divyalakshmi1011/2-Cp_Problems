@@ -13,14 +13,14 @@ def findzerowithbisection(x, epsilon):
 	high = x
 	middle = float((low + high)/2)
 	while(abs((middle)**2) - x >= epsilon):
-		if((middle)**2 > x):
+		if(((middle)**2) > x):
 			high = middle
-		elif((middle)**2 < x):
+		elif(((middle)**2) < x):
 			low = middle
 		else:
 			print(middle,x)
 			break
-		middle = float((low + high)/2)
+		middle = (low + high)/2
 	return middle
 
 print(findzerowithbisection(25, 0.01))
