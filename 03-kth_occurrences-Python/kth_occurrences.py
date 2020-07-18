@@ -12,15 +12,21 @@ def fun_kth_occurrences(s, n):
 			freq[item] += 1
 		else: 
 			freq[item] = 1
-	x = list(freq.keys())
+	maxi = max(freq.values())
+	x = []
+	for item in freq.keys():
+		if(maxi == freq[item]):
+			x.append(item)
+	print(x)
 	count = 0
 	for i in range(len(x)):
 		if(freq[x[i]] > 1):
+			print(x[i])
 			count = count + 1
 		if(count == n):
 			print(x)
 			print(count,n)
-			return x[n]
+			return x[i]
 			break
 
 print(fun_kth_occurrences("helllo woorld",2))
