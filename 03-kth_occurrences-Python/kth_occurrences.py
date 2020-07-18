@@ -18,6 +18,8 @@ def fun_kth_occurrences(s, n):
 		if(freq[x[i]] > 1):
 			count = count + 1
 		if(count == n):
+			print(x)
+			print(count,n)
 			return x[n]
 			break
 
