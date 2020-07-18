@@ -8,11 +8,14 @@
 # lookAndSay([3,3,8,3,3,3,3]) == [(2,3),(1,8),(4,3)]
 
 def lookandsay(a):
+    print(type(a))
+    b = ''.join(map(str, a))
+    print(b)
     result = []
-    repeat = a[0]
-    a = a[1:]+" "
+    repeat = b[0]
+    a = b[1:]+" "
     count = 1
-    for item in a:
+    for item in b:
         if item != repeat:
             result.append((str(count),repeat))
             count = 1
@@ -21,4 +24,4 @@ def lookandsay(a):
             count += 1
     return result
 
-print(lookandsay("334456677"))
+print(lookandsay([3,3,4,4,5,6,6,7,7]))
