@@ -19,15 +19,13 @@ def isprime(n):
 	else:
 		return False
 def fun_nth_palindromic_prime(n):
-	s = str(n)
-	r = s[::-1]
 	if(n == 0):
 		return 2
 	i = 3
 	count = 0
 	while(count <= n):
-		if(isprime(i) and s == r):
-			# print("divya",i)
+		if(isprime(i) and i == int(str(i)[::-1])):
+			print("divya",i)
 			count = count + 1
 			if(count == n):
 				break
@@ -36,4 +34,4 @@ def fun_nth_palindromic_prime(n):
 		i = i + 1
 	return i
 
-print(fun_nth_palindromic_prime(0))
+print(fun_nth_palindromic_prime(20))
