@@ -5,6 +5,7 @@
 
 
 def fun_kth_occurrences(s, n):
+	s = s.strip()
 	my_list = list(s)
 	freq = {} 
 	for item in my_list: 
@@ -34,5 +35,6 @@ def fun_kth_occurrences(s, n):
 			print(count,n)
 			return x[i]
 			break
+	return x[0]
 
-print(fun_kth_occurrences("helllo woorld",2))
+print(fun_kth_occurrences("    h  ", 2))
