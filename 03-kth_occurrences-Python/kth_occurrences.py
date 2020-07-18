@@ -12,11 +12,17 @@ def fun_kth_occurrences(s, n):
 			freq[item] += 1
 		else: 
 			freq[item] = 1
-	maxi = max(freq.values())
-	x = []
-	for item in freq.keys():
-		if(maxi == freq[item]):
-			x.append(item)
+			x = []
+	l = list(freq.values())
+	m = list(freq.keys())
+	l.sort(reverse = True)
+	p = list(freq.values())
+	print("l",l)
+	for i in l:
+		print("i",i)
+		t = m[p.index(i)]
+		print("t",t)
+		x.append(t)
 	print(x)
 	count = 0
 	for i in range(len(x)):
