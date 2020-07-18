@@ -6,7 +6,13 @@
 
 def fun_kth_occurrences(s, n):
 	my_list = list(s)
+	freq = {} 
+	for item in my_list: 
+		if (item in freq): 
+			freq[item] += 1
+		else: 
+			freq[item] = 1
+			x = list(freq.keys())
+	return x
 
-	return 'a'
-
-
+print(fun_kth_occurrences("abbcccddefgg",2))
