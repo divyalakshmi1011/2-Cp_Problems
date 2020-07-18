@@ -17,14 +17,19 @@
 
 
 def fun_wordwrap(s, n):
-	for i in range(n - 1,len(s),n):
-		print(i)
-		print(s[:i + 1])
-		s = s[i:]
-		# print(s)
-			# return ""
+	t = ""
+	while(len(s) > 0):
+		if(len(s) > n):
+			print(s[:n])
+			t += s[:n] + "\n"
+			s = s[n:]
+		else:
+			print(s)
+			t += s
+			break
+	print(t)
 
-print(fun_wordwrap("abcdefgh",4))
+print(fun_wordwrap("abcdefghijklmnopqr",4))
 
 
  
