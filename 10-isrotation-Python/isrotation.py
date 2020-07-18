@@ -16,10 +16,12 @@ def isrotation(x, y):
 	if(x == y):
 		return True
 	t = str(x)
+	if(t[::-1] == str(y)):
+		return True
 	for i in range(len(t)):
 		r = fun_rotatestrings(t,i)
 		if(int(r) == y):
 			return True
 	return False
 
-print(isrotation(1234,1234))
+print(isrotation(3142, 1234))
