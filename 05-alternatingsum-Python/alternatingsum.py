@@ -5,7 +5,15 @@
 
 
 
-def fun_alternatingsum(a): 
-	return 0
+def fun_alternatingsum(a):
+	sum = 0
+	for i in range(0,len(a)):
+		if(i%2 == 0):
+			sum += a[i]
+			print("e",sum)
+		elif(i%2 != 0):
+			sum -= a[i]
+			print("o",sum)
+	return sum
 
-
+print(fun_alternatingsum([5,3,8,4]))
