@@ -11,7 +11,13 @@
 def inverselookandsay(a):
 	# Your code goes here
 	l = []
+	if(len(a) == 0):
+		return l
 	for item in a:
-		for i in range(len(item[0])):
+		if(len(item) == 0):
+			return l
+		for i in range(item[0]):
 			l.append(item[1])
-	pass
+	return l
+
+print(inverselookandsay([(),]))
