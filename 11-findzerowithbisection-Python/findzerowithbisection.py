@@ -12,7 +12,7 @@ def findzerowithbisection(x, epsilon):
 	low = 0.0
 	high = x
 	middle = float((low + high)/2)
-	while(abs((middle)**2) - x >= epsilon):
+	while(abs((middle)**2 - x) >= epsilon):
 		print(abs((middle)**2))
 		if(((middle)**2) > x):
 			print(middle,x,1)
