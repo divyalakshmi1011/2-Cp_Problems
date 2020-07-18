@@ -9,19 +9,22 @@
 
 def lookandsay(a):
     print(type(a))
-    b = ''.join(map(str, a))
+    b = a
+    b.append(" ")
     print(b)
     result = []
     repeat = b[0]
-    a = b[1:]+" "
+    b = b[1:]
     count = 1
+    if(len(a) == 0):
+        return result
     for item in b:
         if item != repeat:
-            result.append((str(count),repeat))
+            result.append((count,int(repeat)))
             count = 1
             repeat = item
         else:
             count += 1
     return result
 
-print(lookandsay([3,3,4,4,5,6,6,7,7]))
+print(lookandsay([3,3,8,3,3,3,3]))
