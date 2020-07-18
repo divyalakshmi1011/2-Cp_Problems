@@ -9,6 +9,26 @@
 
 
 
-def fun_getaverage(s): 
-	return 0.0
+
+def fun_getaverage(s):
+	l = s.split(",")
+	x =""
+	sum = []
+	for item in l:
+		if (item.isalpha()):
+			x += item
+		else:
+			if(item.isdigit()):
+				sum.append(int(item))
+			else:
+				x += item
+	if(len(sum) == 0):
+		return float(0
+		)
+	h = 0
+	for i in sum:
+		h += i
+	return (h/len(sum))
+
+print(fun_getaverage("2,3,ddd4ff,34,1"))
 
