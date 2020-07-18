@@ -18,6 +18,8 @@
 
 def fun_wordwrap(s, n):
 	t = ""
+	s = s.lstrip()
+	s = s.rstrip()
 	while(len(s) > 0):
 		if(len(s) > n):
 			# print(s[:n])
@@ -27,10 +29,11 @@ def fun_wordwrap(s, n):
 			# print(s)
 			t += s
 			break
+	# t = t.lstrip()
 	t = t.replace(" ","-")
 	return t
 
-print(fun_wordwrap("abcdefghijk lmnopqr",5))
+print(fun_wordwrap(" a b c de fgh ",4))
 
 
  
