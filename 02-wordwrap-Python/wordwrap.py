@@ -20,16 +20,17 @@ def fun_wordwrap(s, n):
 	t = ""
 	while(len(s) > 0):
 		if(len(s) > n):
-			print(s[:n])
+			# print(s[:n])
 			t += s[:n] + "\n"
 			s = s[n:]
 		else:
-			print(s)
+			# print(s)
 			t += s
 			break
+	t = t.replace(" ","-")
 	return t
 
-print(fun_wordwrap("abcdefghijklmnopqr",4))
+print(fun_wordwrap("abcdefghijk lmnopqr",5))
 
 
  
