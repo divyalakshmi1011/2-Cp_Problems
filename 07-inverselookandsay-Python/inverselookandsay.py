@@ -10,4 +10,8 @@
 
 def inverselookandsay(a):
 	# Your code goes here
+	l = []
+	for item in a:
+		for i in range(len(item[0])):
+			l.append(item[1])
 	pass
