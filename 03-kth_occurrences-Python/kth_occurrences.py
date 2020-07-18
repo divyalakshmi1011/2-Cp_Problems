@@ -12,7 +12,13 @@ def fun_kth_occurrences(s, n):
 			freq[item] += 1
 		else: 
 			freq[item] = 1
-			x = list(freq.keys())
-	return x
+	x = list(freq.keys())
+	count = 0
+	for i in range(len(x)):
+		if(freq[x[i]] > 1):
+			count = count + 1
+		if(count == n):
+			return x[n]
+			break
 
-print(fun_kth_occurrences("abbcccddefgg",2))
+print(fun_kth_occurrences("helllo woorld",2))
