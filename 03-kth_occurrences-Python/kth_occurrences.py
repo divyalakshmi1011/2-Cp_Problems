@@ -5,6 +5,8 @@
 
 
 def fun_kth_occurrences(s, n):
+	my_list = list(s)
+
 	return 'a'
 
 
