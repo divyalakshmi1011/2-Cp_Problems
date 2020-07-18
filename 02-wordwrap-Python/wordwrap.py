@@ -27,7 +27,7 @@ def fun_wordwrap(s, n):
 			print(s)
 			t += s
 			break
-	print(t)
+	return t
 
 print(fun_wordwrap("abcdefghijklmnopqr",4))
 
