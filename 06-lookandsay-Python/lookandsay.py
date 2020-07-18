@@ -14,9 +14,11 @@ def lookandsay(a):
     count = 1
     for item in a:
         if item != repeat:
-            result.append(str(times),repeat)
+            result.append((str(count),repeat))
             count = 1
             repeat = item
         else:
             count += 1
     return result
+
+print(lookandsay("334456677"))
