@@ -10,5 +10,7 @@ def fun_isrectangular(l):
 			return False
 	return True
 
+print(fun_isrectangular([[1, 2, 3], [1, 1]]))
+
 
 
