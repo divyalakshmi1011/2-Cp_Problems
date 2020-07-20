@@ -21,13 +21,15 @@ def ismostlymagicsquare(arr):
     l.append(d2)
     return l
 
+def most_frequent(List): 
+    return max(set(List), key = List.count) 
 
 def fixmostlymagicsquare(L):
 	k = ismostlymagicsquare(L)
 	if len(set(k)) == 1 :
 		return L
 	else:
-		x = list(set(k))
-		return x[1]
+		x = most_frequent(k)
+		return x
 
 print(fixmostlymagicsquare([[2, 7, 9], [9, 5, 1], [4, 3, 8]]))
