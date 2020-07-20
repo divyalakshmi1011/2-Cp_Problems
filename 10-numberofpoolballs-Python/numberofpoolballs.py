@@ -9,4 +9,13 @@
 
 def numberofpoolballs(rows):
 	# Your code goes here
-	pass
+	sum = 0
+	if(rows == 1):
+		return 1
+	else:
+		for i in range(1,rows + 1):
+			sum += i
+			print(sum)
+		return sum
+
+print(numberofpoolballs(4))
