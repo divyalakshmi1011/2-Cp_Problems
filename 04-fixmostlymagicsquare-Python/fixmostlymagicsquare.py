@@ -36,14 +36,18 @@ def fixmostlymagicsquare(L):
 		diff = x - y
 		for i in range(len(L)):
 			for j in range(len(L[0])):
+				a = L[i][j]
 				L[i][j] = L[i][j] + diff
 				v = ismostlymagicsquare(L)
 				print(set(v))
 				if(len(set(v)) == 1):
 					print("divya")
+					b = L
 					break
-		return L
+				else:
+					L[i][j] = a
+		return b
 
 
 
-print(fixmostlymagicsquare([[2, 7, 9], [9, 5, 1], [4, 3, 8]]))
+print(fixmostlymagicsquare([[16, 3, 2, 13], [5, 10, 11, 18], [9, 6, 7, 12],[4, 15, 14, 1]]))
