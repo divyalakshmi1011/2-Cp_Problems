@@ -8,15 +8,17 @@ def ismostlymagicsquare(arr):
     d1 = 0
     d2 = 0
     l = []
+    for col in range(len(arr)):
+        l.append(sum(row[col] for row in arr))
     for i in range(0, len(arr)): 
-        sum = 0
+        s = 0
         for j in range(0, len(arr[0])): 
             if (i == j): 
                 d1 += arr[i][j] 
             if (i == len(arr[0]) - j - 1): 
                 d2 += arr[i][j]
-            sum += arr[i][j]
-        l.append(sum)
+            s += arr[i][j]
+        l.append(s)
     l.append(d1)
     l.append(d2)
     return l
