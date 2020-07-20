@@ -6,6 +6,8 @@
 def hasduplicates(L):
 	# Your code goes here
 	for i in range(len(L) - 1):
-		if(L[i] == L[i + 1]):
-			return True
+		for item in L[i]:
+			for s in L[i + 1]:
+				if(item == s):
+					return True
 	return False
