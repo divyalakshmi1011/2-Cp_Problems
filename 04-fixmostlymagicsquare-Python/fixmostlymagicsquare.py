@@ -38,8 +38,9 @@ def fixmostlymagicsquare(L):
 			for j in range(len(L[0])):
 				L[i][j] = L[i][j] + diff
 				v = ismostlymagicsquare(L)
-				print(v)
+				print(set(v))
 				if(len(set(v)) == 1):
+					print("divya")
 					break
 		return L
 
