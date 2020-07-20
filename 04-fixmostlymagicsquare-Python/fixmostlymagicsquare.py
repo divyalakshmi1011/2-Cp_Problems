@@ -30,6 +30,19 @@ def fixmostlymagicsquare(L):
 		return L
 	else:
 		x = most_frequent(k)
-		return x
+		for itrm in set(k):
+			if itrm != x:
+				y = itrm
+		diff = x - y
+		for i in range(len(L)):
+			for j in range(len(L[0])):
+				L[i][j] = L[i][j] + diff
+				v = ismostlymagicsquare(L)
+				print(v)
+				if(len(set(v)) == 1):
+					break
+		return L
+
+
 
 print(fixmostlymagicsquare([[2, 7, 9], [9, 5, 1], [4, 3, 8]]))
