@@ -13,3 +13,5 @@ def canqueenattack(qR, qC, oR, oC):
 		return True
 	else:
 		return False
+
+print(canqueenattack(1, 1, 1, 2))
