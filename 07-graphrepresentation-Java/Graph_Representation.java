@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.stream.Collectors;
+
 class Node{
 	int value;
 	ArrayList<Edge> edges;
@@ -109,9 +111,26 @@ public class Graph_Representation{
         // Row numbers represent from nodes,
         // column numbers represent to nodes.
         // Store the edge values in each spot,
-        // and a 0 if no edge exists."""
-		
+		// and a 0 if no edge exists."""
+		ArrayList<Integer> n = new ArrayList<Integer>();
+		for(int h = 0; h < nodes.size();h++){
+			n.add(nodes.get(h).value);
+		}
+		int a = Collections.max(n);
+		int[][] matrix = new int[a][a];
+		Arrays.fill(matrix, 0);
+		for(int i = 0; i < edges.size();i++){
+			matrix[edges.get(i).node_from.value][edges.get(i).node_to.value] = edges.get(i).value;
+		}
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		for (int[] array : matrix) {
+			//This will add int[] object into the list, and not the int values.
+			ArrayList<Integer> p = new ArrayList<Integer>();
+			for (int i = 0; i < array.length;i++){
+				p.add(array[i]);
+			}
+			r.add(p);
+		}
 		return r;
 	}
 
