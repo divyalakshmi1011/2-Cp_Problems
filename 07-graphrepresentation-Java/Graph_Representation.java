@@ -140,7 +140,7 @@ public class Graph_Representation{
 		graph.insert_edge(101, 1, 3);
 		graph.insert_edge(102, 1, 4);
 		graph.insert_edge(103, 3, 4);
-		ArrayList<ArrayList<Integer>> r= graph.get_adjacency_list();
+		ArrayList<ArrayList<Integer>> r= graph.get_adjacency_matrix();
 		ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> a1 = new ArrayList<Integer>();
 		a1.add(0);a1.add(0);a1.add(0);a1.add(0);a1.add(0);a.add(a1);
