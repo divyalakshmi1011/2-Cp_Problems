@@ -105,13 +105,14 @@ public class Graph_Representation{
 		graph.insert_edge(101, 1, 3);
 		graph.insert_edge(102, 1, 4);
 		graph.insert_edge(103, 3, 4);
-		ArrayList<ArrayList<Integer>> r= graph.get_edge_list();
+		ArrayList<ArrayList<Integer>> r= graph.get_adjacency_list();
 		ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> a1 = new ArrayList<Integer>();
-		a1.add(100);a1.add(1);a1.add(2);a.add(a1);
-		a1 = new ArrayList<Integer>();a1.add(101);a1.add(1);a1.add(3);a.add(a1);
-		a1 = new ArrayList<Integer>();a1.add(102);a1.add(1);a1.add(4);a.add(a1);
-		a1 = new ArrayList<Integer>();a1.add(103);a1.add(3);a1.add(4);a.add(a1);
+		a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(2);a1.add(3);a1.add(4);a.add(a1);
+		a1 = new ArrayList<Integer>();a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(4);a.add(a1);
+		a1 = new ArrayList<Integer>();a.add(a1);
 		System.out.println(r);
 		System.out.println(a);
 	}
