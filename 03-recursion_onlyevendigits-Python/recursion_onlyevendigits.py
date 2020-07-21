@@ -8,12 +8,21 @@
 # Also the function returns the empty list if the original list is empty. 
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
-def evenlis(lis):  
-    if len(lis) == 0:
-        return []  
-    else:
-        return [lis[0]] if lis[0] % 2 == 0 else [] + evenlis(lis[1:])
+def even(n):
+	if n == 0:
+		return 0
+	else:
+		num = n %10
+		if n%2 == 0:
+			return even(n//10) * 10 + num
+		return even(n//10)
+    
+print(even(1438976))
 
-print(evenlis([143]))
-def fun_recursion_onlyevendigits(l): 
-		return []
+def fun_recursion_onlyevendigits(l):
+    if(len(l) == 0):
+        return []
+    else:
+        return [even(l[0])] + fun_recursion_onlyevendigits(l[1:])
+
+print(fun_recursion_onlyevendigits([43,23265,17,58344]))
