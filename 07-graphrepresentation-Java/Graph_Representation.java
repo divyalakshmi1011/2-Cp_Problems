@@ -80,18 +80,21 @@ public class Graph_Representation{
         // "from" nodes.
         // Each section in the list will store a list of To Node
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
-		for(int i = 0; i < nodes.size();i++){
-			ArrayList<Edge> x = nodes.get(i).edges;
-			ArrayList<Integer> y = new ArrayList<Integer>();
-			for (int j = 0; j < y.size();j++){
-				y.add(x.get(j).value);
-			}
-			r.add(y);
-			// x.add(nodes.get(i).node_from.value);
-			// x.add(nodes.get(i).node_to.value);
+		ArrayList<Integer> n = new ArrayList<Integer>();
+		for(int h = 0; h < nodes.size();h++){
+			n.add(nodes.get(h).value);
 		}
-		return r;
-	}
+		int a = Collections.max(n);
+		ArrayList<Integer> x = new ArrayList<Integer>();
+		for(int j = 0; j < a + 1; j++){
+		for(int i = 0; i < edges.size();i++){
+			if(edges.get(i).node_from.value == j){
+				x.add(edges.get(i).node_to.value);
+			}
+			}
+		}
+			return r;
+		}
 
 	public ArrayList<ArrayList<Integer>> get_adjacency_matrix(){
 		// """Return a matrix, or 2D list.
