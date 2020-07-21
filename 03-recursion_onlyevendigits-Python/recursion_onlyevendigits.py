@@ -17,6 +17,7 @@ def iseven(n):
 	if(rem % 2) == 0:
 		print("divya",rem)
 		l.append(rem)
+		print(l)
 	else:
 		iseven(k)
 
