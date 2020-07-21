@@ -16,10 +16,11 @@
 def recursion_secondlargest(L):
 	# Your code goes here
 	if(L[0] < L[1] and len(L) > 2):
-		L.pop(L[0])
+		print("div",L[0],L[1])
+		print(L.pop(L[0]),1)
 		return recursion_secondlargest(L)
 	elif(L[0] > L[1] and len(L) > 2):
-		L.pop(L[1])
+		print(L.pop(L[1]),2)
 		return recursion_secondlargest(L)
 	elif(len(L) == 2):
 		if(L[0] < L[1]):
