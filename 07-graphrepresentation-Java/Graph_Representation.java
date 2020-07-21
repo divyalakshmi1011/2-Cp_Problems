@@ -92,6 +92,8 @@ public class Graph_Representation{
 				x.add(edges.get(i).node_to.value);
 			}
 			}
+			r.add(x);
+			x.clear();
 		}
 			return r;
 		}
