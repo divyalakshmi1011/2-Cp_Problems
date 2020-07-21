@@ -85,8 +85,8 @@ public class Graph_Representation{
 			n.add(nodes.get(h).value);
 		}
 		int a = Collections.max(n);
-		ArrayList<Integer> x = new ArrayList<Integer>();
 		for(int j = 0; j < a + 1; j++){
+			ArrayList<Integer> x = new ArrayList<Integer>();
 		for(int i = 0; i < edges.size();i++){
 			System.out.println(edges.get(i).node_from.value + " " + j );
 			if(edges.get(i).node_from.value == j){
@@ -98,8 +98,8 @@ public class Graph_Representation{
 			System.out.println("after" + x);
 			r.add(x);
 			System.out.println("after" + r);
-			x.clear();
-			System.out.println("clear" + x);
+			// x.clear();
+			// System.out.println("clear" + x);
 		}
 			return r;
 		}
