@@ -117,8 +117,8 @@ public class Graph_Representation{
 			n.add(nodes.get(h).value);
 		}
 		int a = Collections.max(n);
-		int[][] matrix = new int[a][a];
-		Arrays.fill(matrix, 0);
+		int[][] matrix = new int[a + 1][a + 1];
+		// Arrays.fill(matrix, 0);
 		for(int i = 0; i < edges.size();i++){
 			matrix[edges.get(i).node_from.value][edges.get(i).node_to.value] = edges.get(i).value;
 		}
