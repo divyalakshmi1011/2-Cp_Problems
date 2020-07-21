@@ -80,10 +80,15 @@ public class Graph_Representation{
         // "from" nodes.
         // Each section in the list will store a list of To Node
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
-		for(int i = 0; i < edges.size();i++){
-			ArrayList<Integer> x = new ArrayList<Integer>();
-			x.add(edges.get(i).node_to.value);
-			r.add(x);
+		for(int i = 0; i < nodes.size();i++){
+			ArrayList<Edge> x = nodes.get(i).edges;
+			ArrayList<Integer> y = new ArrayList<Integer>();
+			for (int j = 0; j < y.size();j++){
+				y.add(x.get(j).value);
+			}
+			r.add(y);
+			// x.add(nodes.get(i).node_from.value);
+			// x.add(nodes.get(i).node_to.value);
 		}
 		return r;
 	}
