@@ -97,7 +97,9 @@ public class Graph_Representation{
 			}
 			System.out.println("after" + x);
 			r.add(x);
+			System.out.println("after" + r);
 			x.clear();
+			System.out.println("clear" + x);
 		}
 			return r;
 		}
