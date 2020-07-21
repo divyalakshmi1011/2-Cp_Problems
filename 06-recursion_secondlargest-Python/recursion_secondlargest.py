@@ -15,16 +15,23 @@
 
 def recursion_secondlargest(L):
 	# Your code goes here
+	if(len(L) == 1 or len(L) == 0):
+		return None
 	if(L[0] < L[1] and len(L) > 2):
 		L.pop(0)
 		return recursion_secondlargest(L)
 	elif(L[0] > L[1] and len(L) > 2):
 		L.pop(1)
 		return recursion_secondlargest(L)
+	elif(L[0] == L[1] and len(L) > 2):
+		a = L[1]
+		L.pop(1)
+		L.append(a)
+		return recursion_secondlargest(L)
 	elif(len(L) == 2):
-		if(L[0] < L[1]):
+		if(L[0] <= L[1]):
 			return L[0]
 		else:
 			return L[1]
 
-print(recursion_secondlargest([1,2,3,4,5]))
+print(recursion_secondlargest([4,4,3]))
