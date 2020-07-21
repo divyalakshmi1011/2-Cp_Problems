@@ -62,7 +62,14 @@ public class Graph_Representation{
 		// """Don't return a list of edge objects!
         // Return a list of list that looks like this:
         // [Edge Value, From Node Value, To Node Value]"""
-        ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		for(int i = 0; i < edges.size();i++){
+			ArrayList<Integer> x = new ArrayList<Integer>();
+			x.add(edges.get(i).value);
+			x.add(edges.get(i).node_from.value);
+			x.add(edges.get(i).node_to.value);
+			r.add(x);
+		}
         return r;
 	}
 
@@ -73,8 +80,12 @@ public class Graph_Representation{
         // "from" nodes.
         // Each section in the list will store a list of To Node
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
+		for(int i = 0; i < edges.size();i++){
+			ArrayList<Integer> x = new ArrayList<Integer>();
+			x.add(edges.get(i).node_to.value);
+			r.add(x);
+		}
 		return r;
-
 	}
 
 	public ArrayList<ArrayList<Integer>> get_adjacency_matrix(){
@@ -86,7 +97,22 @@ public class Graph_Representation{
 		
 		ArrayList<ArrayList<Integer>> r = new ArrayList<ArrayList<Integer>>();
 		return r;
+	}
 
-
+	public static void main(String[] args){
+		Graph_Representation graph = new Graph_Representation();
+		graph.insert_edge(100, 1, 2);
+		graph.insert_edge(101, 1, 3);
+		graph.insert_edge(102, 1, 4);
+		graph.insert_edge(103, 3, 4);
+		ArrayList<ArrayList<Integer>> r= graph.get_edge_list();
+		ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>();
+		ArrayList<Integer> a1 = new ArrayList<Integer>();
+		a1.add(100);a1.add(1);a1.add(2);a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(101);a1.add(1);a1.add(3);a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(102);a1.add(1);a1.add(4);a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(103);a1.add(3);a1.add(4);a.add(a1);
+		System.out.println(r);
+		System.out.println(a);
 	}
 }
