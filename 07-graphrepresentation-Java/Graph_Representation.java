@@ -92,7 +92,7 @@ public class Graph_Representation{
 			if(edges.get(i).node_from.value == j){
 				// System.out.println("divya");
 				x.add(edges.get(i).node_to.value);
-				System.out.println(x);
+				// System.out.println(x);
 			}
 			}
 			// System.out.println("after" + x);
@@ -124,11 +124,11 @@ public class Graph_Representation{
 		ArrayList<ArrayList<Integer>> r= graph.get_adjacency_list();
 		ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>();
 		ArrayList<Integer> a1 = new ArrayList<Integer>();
-		a.add(a1);
-		a1 = new ArrayList<Integer>();a1.add(2);a1.add(3);a1.add(4);a.add(a1);
-		a1 = new ArrayList<Integer>();a.add(a1);
-		a1 = new ArrayList<Integer>();a1.add(4);a.add(a1);
-		a1 = new ArrayList<Integer>();a.add(a1);
+		a1.add(0);a1.add(0);a1.add(0);a1.add(0);a1.add(0);a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(0);a1.add(0);a1.add(100);a1.add(101);a1.add(102);a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(0);a1.add(0);a1.add(0);a1.add(0);a1.add(0);a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(0);a1.add(0);a1.add(0);a1.add(0);a1.add(103);a.add(a1);
+		a1 = new ArrayList<Integer>();a1.add(0);a1.add(0);a1.add(0);a1.add(0);a1.add(0);a.add(a1);
 		System.out.println(r);
 		System.out.println(a);
 	}
