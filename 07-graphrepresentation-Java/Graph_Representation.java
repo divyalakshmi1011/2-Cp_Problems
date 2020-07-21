@@ -88,11 +88,14 @@ public class Graph_Representation{
 		ArrayList<Integer> x = new ArrayList<Integer>();
 		for(int j = 0; j < a + 1; j++){
 		for(int i = 0; i < edges.size();i++){
-			System.out.println(edges.get(i).node_from.value + j);
+			System.out.println(edges.get(i).node_from.value + " " + j );
 			if(edges.get(i).node_from.value == j){
+				System.out.println("divya");
 				x.add(edges.get(i).node_to.value);
+				System.out.println(x);
 			}
 			}
+			System.out.println("after" + x);
 			r.add(x);
 			x.clear();
 		}
