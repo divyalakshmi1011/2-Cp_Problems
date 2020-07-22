@@ -19,5 +19,28 @@
 
 def recursion_binarysearchvalues(L, v):
 	# Your codes goes here
-	pass
+	low = 0
+	high = len(L) - 1
+	if(L[-1] == " "):
+		low = L[-3]
+		high = L[-2]
+		L.pop(-1)
+		L.pop(-1)
+		L.pop(-1)
+	if(low > high):
+		return []
+	mid = low + (high - low) // 2
+	t = (mid,L[mid])
+	arr = [t]
+	if(L[mid] == v):
+		return arr
+	if(v > L[mid]):
+		low = mid + 1
+	else:
+		high = mid - 1
+	L.append(low)
+	L.append(high)
+	L.append(" ")
+	return arr + recursion_binarysearchvalues(L,v)
 	
+print(recursion_binarysearchvalues(['a', 'c', 'f', 'g', 'm', 'q'], 'a'))
