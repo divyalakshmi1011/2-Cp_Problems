@@ -40,13 +40,24 @@ def add_all_digits(lst):
 
 
 def fun_nth_smithnumber(n):
-    numbers = []
-    for i in range(4,n + 1):
-        fac = isfactor(i)
-        print(fac)
-        if len(fac) > 1:
-            if digits_sum(i) == add_all_digits(fac):
-                print(i)
+    if(n == 0):
+        return 4
+    s = 5
+    count = 0
+    while(count <= n):
+        f = isfactor(s)
+        if(len(f) > 1):
+            if(digits_sum(s) == add_all_digits(f)):
+                count = count + 1
+                if(n == count):
+                    break
+                else:
+                    s = s + 1
+            else:
+                s = s + 1
+        else:
+            s = s + 1
+    return s
     
 
 print(fun_nth_smithnumber(0))
