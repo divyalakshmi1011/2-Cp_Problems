@@ -13,11 +13,13 @@ def get_key(val,freq):
 
 def longestdigitrun(n):
 	d = collections.defaultdict(int)
-	b = str(abs(n))
+	b = str(abs(n)) + " "
+	print(b)
 	repeat = b[0]
 	b = b[1:]
 	count = 1
 	for item in b:
+		print("item",item)
 		if item != repeat:
 			print(repeat)
 			if(repeat in d):
