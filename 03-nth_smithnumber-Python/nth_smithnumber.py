@@ -46,9 +46,10 @@ def fun_nth_smithnumber(n):
     if(n == 0):
         return 4
     s = 5
-    count = 1
+    count = 0
     while(count <= n):
         if(is_smithnumber(s)):
+            print("divya")
             count = count + 1
             if(n == count):
                 break
