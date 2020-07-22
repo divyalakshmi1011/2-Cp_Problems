@@ -15,7 +15,7 @@ def fun_carrylessadd(x, y):
 		sum = sum + (temp_sum * counter)
 		x = x // 10
 		y = y // 10
-		counter = counter + 1
+		counter = counter * 10
 	return sum
 
 print(fun_carrylessadd(785,376))
