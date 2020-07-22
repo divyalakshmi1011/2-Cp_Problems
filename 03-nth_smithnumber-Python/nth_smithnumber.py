@@ -7,6 +7,30 @@
 # so fun_nthsmithnumber(0) should return 4
 # so fun_nthsmithnumber(1) should return 22
 
+def isfactor(n):
+    fact_list = []
+    factor = 2
+    if(n == 1):
+        fact_list.append(1)
+    else:
+        while True:
+            if(n % factor) == 0 :
+                fact_list.append(factor)
+                n = n // factor
+                if(n == 1):
+                    break
+            else:
+                factor = factor + 1
+    return fact_list
+
+def digits_sum(n):
+    sum = 0
+    while(n):
+        r = n % 10
+        sum = sum + r
+        n = n // 10
+    return sum
+print(digits_sum(1456))
 
 def fun_nth_smithnumber(n):
     return 1
