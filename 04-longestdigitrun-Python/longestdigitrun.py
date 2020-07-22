@@ -19,6 +19,7 @@ def longestdigitrun(n):
 	count = 1
 	for item in b:
 		if item != repeat:
+			print(repeat)
 			if(repeat in d):
 				if(d[repeat] < count):
 					d[repeat] = count
@@ -32,6 +33,7 @@ def longestdigitrun(n):
 	l.sort()
 	d = dict(l)
 	m = max(d.values())
+	print(d)
 	return int(get_key(m,d))
 
-print(longestdigitrun(11777333732))
+print(longestdigitrun(44332211))
