@@ -31,7 +31,7 @@ def digits_sum(n):
         n = n // 10
     return sum
 
-def fun_nth_smithnumber(n):
+def is_smithnumber(n):
     l = isfactor(n)
     s1 = digits_sum(n)
     s2 = 0
@@ -42,5 +42,18 @@ def fun_nth_smithnumber(n):
     else:
         return False
 
-print(fun_nth_smithnumber(274))
-print(fun_nth_smithnumber(382))
+def fun_nth_smithnumber(n):
+    if(n == 0):
+        return 4
+    s = 5
+    count = 1
+    while(count <= n):
+        if(is_smithnumber(s)):
+            count = count + 1
+            if(n == count):
+                break
+        else:
+            s = s + 1
+    return s
+print(fun_nth_smithnumber(0))
+print(fun_nth_smithnumber(1))
