@@ -25,36 +25,29 @@ def isfactor(n):
 
 def digits_sum(n):
     sum = 0
-    while(n):
+    while(n > 0):
         r = n % 10
         sum = sum + r
+        n = n - r
         n = n // 10
     return sum
 
-def is_smithnumber(n):
-    l = isfactor(n)
-    s1 = digits_sum(n)
-    s2 = 0
-    for i in range(len(l)):
-        s2 += digits_sum(l[i])
-    if(s1 == s2):
-        return True
-    else:
-        return False
+def add_all_digits(lst):
+    sum = 0
+    for i in range (len(lst)):
+        sum += digits_sum(lst[i])
+    return sum
+
 
 def fun_nth_smithnumber(n):
-    if(n == 0):
-        return 4
-    s = 5
-    count = 0
-    while(count <= n):
-        if(is_smithnumber(s)):
-            print("divya")
-            count = count + 1
-            if(n == count):
-                break
-        else:
-            s = s + 1
-    return s
+    numbers = []
+    for i in range(4,n + 1):
+        fac = isfactor(i)
+        print(fac)
+        if len(fac) > 1:
+            if digits_sum(i) == add_all_digits(fac):
+                print(i)
+    
+
 print(fun_nth_smithnumber(0))
-print(fun_nth_smithnumber(1))
+print(fun_nth_smithnumber(10))
