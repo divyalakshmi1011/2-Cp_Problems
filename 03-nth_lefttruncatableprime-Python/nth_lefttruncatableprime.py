@@ -75,4 +75,4 @@ def fun_nth_lefttruncatableprime(n):
                 p = p + 1
     return p
 
-print(fun_nth_lefttruncatableprime(20))
+print(fun_nth_lefttruncatableprime(25))
