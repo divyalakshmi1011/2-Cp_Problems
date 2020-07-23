@@ -12,8 +12,10 @@ import math
 def fun_nth_kaprekarnumber(n):
     if(n == 0):
         return 1
+    if(n == 1):
+        return 9
     count = 0
-    k = 2
+    k = 10
     while(count <= n):
         b = (k ** 2) % (10 ** 2)
         a = (k ** 2 - b)//(10 ** 2)
@@ -27,4 +29,7 @@ def fun_nth_kaprekarnumber(n):
             k = k + 1
     return k
 
+print(fun_nth_kaprekarnumber(0))
 print(fun_nth_kaprekarnumber(1))
+print(fun_nth_kaprekarnumber(2))
+print(fun_nth_kaprekarnumber(3))
