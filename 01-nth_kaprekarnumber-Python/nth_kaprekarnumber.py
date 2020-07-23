@@ -10,21 +10,24 @@
 import math
 
 def fun_nth_kaprekarnumber(n):
-    if(n == 0):
-        return 1
-    if(n == 1):
-        return 9
-    count = 1
-    k = 10
+    count = 0
+    k = 1
     while(count <= n):
-        b = (k ** 2) % (10 ** 2)
-        a = (k ** 2 - b)//(10 ** 2)
-        if((a + b) == k):
-            count = count + 1
-            if(count == n):
+        # print(k, "count",count)
+        sqr = k ** 2
+        digits = str(sqr)
+        l = len(digits)
+        for i in range(1,l):
+            # print("l",l)
+            left = int("".join(digits[:i]))
+            right = int("".join(digits[i:]))
+            # print(left,right,sqr)
+            if(left + right == k and left != 0 and right != 0):
+                # print("divya")
+                count = count + 1
                 break
-            else:
-                k = k + 1
+        if(count == n):
+            break
         else:
             k = k + 1
     return k
@@ -33,3 +36,10 @@ print(fun_nth_kaprekarnumber(0))
 print(fun_nth_kaprekarnumber(1))
 print(fun_nth_kaprekarnumber(2))
 print(fun_nth_kaprekarnumber(3))
+print(fun_nth_kaprekarnumber(4))
+print(fun_nth_kaprekarnumber(5))
+print(fun_nth_kaprekarnumber(6))
+print(fun_nth_kaprekarnumber(7))
+print(fun_nth_kaprekarnumber(8))
+print(fun_nth_kaprekarnumber(9))
+print(fun_nth_kaprekarnumber(10))
