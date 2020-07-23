@@ -9,9 +9,9 @@ def prime(n):
 
 def factors(n):
 	L=[]
-	for i in range(n):
+	for i in range(1,n):
 		if(n % i == 0):
-			L.add(i)
+			L.append(i)
 	return L
 
 def nthpowerfulnumber(n):
@@ -30,4 +30,6 @@ def nthpowerfulnumber(n):
 			break
 		else:
 			p = p + 1
-	pass
+	return p
+
+print(nthpowerfulnumber(4))
