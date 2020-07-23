@@ -22,6 +22,26 @@ def iskapre(n):
             return True
     return False
 
-print(iskapre(45))
+# print(iskapre(40))
 def fun_nearestkaprekarnumber(n):
-    return 1
+    k = 0
+    if(iskapre(n)):
+        return n
+    else:
+        a = n- 1
+        b = n + 1
+        while(True):
+            if(iskapre(a)):
+                k = a
+                break
+            elif(iskapre(b)):
+                k = b
+                break
+            else:
+                a = a - 1
+                b = b + 1
+    return k
+
+print(fun_nearestkaprekarnumber(50))
+    
+
