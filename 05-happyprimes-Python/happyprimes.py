@@ -9,16 +9,24 @@
 # Note: the autograder will grade each of the following functions, so they are required. 
 # However, they also are here specifically because they are just the right helper 
 # functions to make nthHappyNumber(n) easier to write!
+
+def prime(n): 
+	return all([(n % j) for j in range(2, int(n**0.5)+1)]) and n>1
+
 def ishappyprimenumber(n):
     # Your code goes here
-    sqr = n**n
-    s = str(sqr)
-    while(len(s) > 1):
+    s = str(n)
+    if(n == 1):
+        return True
+    if(len(s) == 1 or n < 0):
+        return False
+    while(len(s) > 1 and prime(n)):
         sum = 0
         for i in range(len(s)):
             sum += (int(s[i]))**2
         s = str(sum)
     if(len(s) == 1):
+        print(s)
         if(int(s) == 1):
             return True
     return False
