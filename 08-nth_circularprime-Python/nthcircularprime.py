@@ -42,7 +42,9 @@ def nthcircularprime(n):
 			flag = True
 			for i in range(len(s)):
 				d = rotate(s,i)
+				# print(d)
 				if(not isprime(int(d))):
+					print(d)
 					flag = False
 			if(flag):
 				count = count + 1
