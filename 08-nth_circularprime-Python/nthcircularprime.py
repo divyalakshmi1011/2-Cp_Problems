@@ -25,6 +25,12 @@ def isprime(n):
 		return True
 	else:
 		return False
+def repetency(str):
+    for i in range(len(str)):
+        for j in range(i + 1,len(str)):
+            if(str[i] == str[j]):
+                return False
+    return True
 
 def nthcircularprime(n):
 	p = 2
@@ -40,18 +46,20 @@ def nthcircularprime(n):
 				p = p + 1
 		else:
 			flag = True
-			for i in range(len(s)):
-				d = rotate(s,i)
-				# print(d)
-				if(not isprime(int(d))):
-					print(d)
-					flag = False
-			if(flag):
-				count = count + 1
-			if(count == n):
-				break
-			else:
-				p = p + 1
+			if(repetency(s)):
+				for i in range(len(s)):
+					d = rotate(s,i)
+					print("before",d,i)
+					if(not isprime(int(d))):
+						print(d,i)
+						flag = False
+				if(flag):
+					count = count + 1
+				if(count == n):
+					break
+				else:
+					p = p + 1
+			else: p = p + 1
 	return p
 
 print(nthcircularprime(5))
