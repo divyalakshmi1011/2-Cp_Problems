@@ -42,6 +42,6 @@ def fun_nearestkaprekarnumber(n):
                 b = b + 1
     return k
 
-print(fun_nearestkaprekarnumber(50))
+print(fun_nearestkaprekarnumber(49))
     
 
