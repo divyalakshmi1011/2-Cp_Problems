@@ -25,7 +25,9 @@ def isprime(n):
 		return False
 
 def fun_nth_lefttruncatableprime(n):
-    p = 2
+    if(n == 0):
+        return 2
+    p = 3
     count = 0
     while(count <= n):
         s = str(p)
@@ -56,18 +58,21 @@ def fun_nth_lefttruncatableprime(n):
                 p = p + 1
         else:
             flag = True
-            for i in range(len(s) - 1):
-                if(not isprime(int(s[i + 1:]))):
-                    flag = False
-            if(flag):
-                print(s)
-                count = count + 1
-                if(count == n):
-                    break
+            if(isprime(p)):
+                for i in range(len(s) - 1):
+                    if(not isprime(int(s[i + 1:]))):
+                        flag = False
+                if(flag):
+                    print(s)
+                    count = count + 1
+                    if(count == n):
+                        break
+                    else:
+                        p = p + 1
                 else:
                     p = p + 1
             else:
                 p = p + 1
     return p
 
-print(fun_nth_lefttruncatableprime(5))
+print(fun_nth_lefttruncatableprime(15))
