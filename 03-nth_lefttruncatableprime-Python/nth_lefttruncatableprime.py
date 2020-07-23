@@ -31,8 +31,8 @@ def fun_nth_lefttruncatableprime(n):
         s = str(p)
         if(len(s) == 1):
             if(isprime(p)):
-                print("1",count,p)
                 count = count + 1
+                print("1",count,p)
                 if(count == n):
                     break
                 else:
@@ -42,10 +42,14 @@ def fun_nth_lefttruncatableprime(n):
         elif(len(s) == 2):
             print("p",p)
             if(isprime(p)):
-                print(count,p)
-                count = count + 1
-                if(count == n):
-                    break
+                if(isprime(int(s[1]))):
+                    count = count + 1
+                    print("2",count,p,n)
+                    if(count == n):
+                        print("divya",count,p,n)
+                        break
+                    else:
+                        p = p + 1
                 else:
                     p = p + 1
             else:
