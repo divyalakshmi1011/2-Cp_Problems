@@ -35,4 +35,4 @@ def nthpowerfulnumber(n):
 			p = p + 1
 	return p
 
-print(nthpowerfulnumber(6))
+print(nthpowerfulnumber(1))
