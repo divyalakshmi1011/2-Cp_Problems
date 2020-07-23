@@ -26,3 +26,5 @@ def fun_nth_kaprekarnumber(n):
         else:
             k = k + 1
     return k
+
+print(fun_nth_kaprekarnumber(0))
