@@ -14,7 +14,8 @@ def fun_nth_carolprime(n):
         return 7
     if(n == 1):
         return 47
+    n = n + 2
     res = ((2**n - 1)**2 - 2)
     return res
 
-print(fun_nth_carolprime(3))
+print(fun_nth_carolprime(4))
