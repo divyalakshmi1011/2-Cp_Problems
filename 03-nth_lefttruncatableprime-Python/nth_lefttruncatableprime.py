@@ -10,5 +10,39 @@
 
 import math
 
+def isprime(n):
+	if(n == 1):
+		return True
+	i = 1
+	count = 0
+	while(i <= n):
+		if(n%i == 0):
+			count = count + 1
+		i = i + 1
+	if(count == 2):
+		return True
+	else:
+		return False
+
 def fun_nth_lefttruncatableprime(n):
-    return 1
+    p = 2
+    count = 0
+    while(count <= n):
+        s = str(p)
+        # print(s)
+        flag = True
+        for i in range(len(s)):
+            if(not isprime(int(s[i]))):
+                flag = False
+        if(flag):
+            print(s)
+            count = count + 1
+            if(count == n):
+                break
+            else:
+                p = p + 1
+        else:
+            p = p + 1
+    return p
+
+print(fun_nth_lefttruncatableprime(5))
