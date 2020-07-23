@@ -11,4 +11,16 @@
 # functions to make nthHappyNumber(n) easier to write!
 def ishappyprimenumber(n):
     # Your code goes here
-    pass
+    sqr = n**n
+    s = str(sqr)
+    while(len(s) > 1):
+        sum = 0
+        for i in range(len(s)):
+            sum += (int(s[i]))**2
+        s = str(sum)
+    if(len(s) == 1):
+        if(int(s) == 1):
+            return True
+    return False
+
+print(ishappyprimenumber(23))
