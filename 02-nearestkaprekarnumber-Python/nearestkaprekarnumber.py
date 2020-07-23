@@ -11,6 +11,17 @@
 
 
 import math
+def iskapre(n):
+    sqr = n ** 2
+    digits = str(sqr)
+    l = len(digits)
+    for i in range(1,l):
+        left = int("".join(digits[:i]))
+        right = int("".join(digits[i:]))
+        if(left + right == n and left != 0 and right != 0):
+            return True
+    return False
 
+print(iskapre(45))
 def fun_nearestkaprekarnumber(n):
     return 1
