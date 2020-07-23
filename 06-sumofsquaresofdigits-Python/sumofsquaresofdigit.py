@@ -9,5 +9,5 @@ def sumofsquaresofdigit(n):
 	s = str(n)
 	sum = 0
 	for i in range(len(s)):
-		sum += int(s[i])
+		sum += (int(s[i])**2)
 	return sum
