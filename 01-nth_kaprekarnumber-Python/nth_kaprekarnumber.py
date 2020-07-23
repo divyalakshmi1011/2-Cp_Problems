@@ -14,7 +14,7 @@ def fun_nth_kaprekarnumber(n):
         return 1
     if(n == 1):
         return 9
-    count = 0
+    count = 1
     k = 10
     while(count <= n):
         b = (k ** 2) % (10 ** 2)
