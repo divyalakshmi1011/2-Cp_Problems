@@ -18,4 +18,4 @@ def fun_nth_carolprime(n):
     res = ((2**n - 1)**2 - 2)
     return res
 
-print(fun_nth_carolprime(4))
+print(fun_nth_carolprime(3))
