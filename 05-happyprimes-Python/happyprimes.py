@@ -25,10 +25,12 @@ def ishappyprimenumber(n):
         for i in range(len(s)):
             sum += (int(s[i]))**2
         s = str(sum)
+        print("s",s)
     if(len(s) == 1):
         print(s)
         if(int(s) == 1):
             return True
     return False
 
-print(ishappyprimenumber(23))
+print(ishappyprimenumber(833))
+print(prime(833))
