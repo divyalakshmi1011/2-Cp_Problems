@@ -11,7 +11,8 @@ def factors(n):
 	L=[]
 	for i in range(1,n):
 		if(n % i == 0):
-			L.append(i)
+			if(prime(i)):
+				L.append(i)
 	return L
 
 def nthpowerfulnumber(n):
@@ -22,16 +23,16 @@ def nthpowerfulnumber(n):
 	p = 2
 	while(count <= n):
 		l = factors(p)
+		flag = True
 		for i in l:
-			if(prime(i)):
-				print(i,p,count)
-				if(p % (i**2) == 0):
-					print("divya",p,i**2)
-					count = count + 1
+			if(p % (i**2) != 0):
+				flag = False
+		if(flag):
+			count = count + 1
 		if(count == n):
 			break
 		else:
 			p = p + 1
 	return p
 
-print(nthpowerfulnumber(5))
+print(nthpowerfulnumber(6))
