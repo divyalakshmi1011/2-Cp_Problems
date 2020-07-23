@@ -10,4 +10,9 @@
 
 
 def fun_nth_carolprime(n):
-    return 0
+    k = n
+    res = ((2**k - 1)**2 - 2)
+    if(res < 0):
+        k = k + 1
+        return fun_nth_carolprime(k)
+    return res
