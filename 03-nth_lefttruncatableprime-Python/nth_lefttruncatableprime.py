@@ -58,7 +58,7 @@ def fun_nth_lefttruncatableprime(n):
                 p = p + 1
         else:
             flag = True
-            if(isprime(p)):
+            if(isprime(p) and '0' not in s):
                 for i in range(len(s) - 1):
                     if(not isprime(int(s[i + 1:]))):
                         flag = False
@@ -75,4 +75,4 @@ def fun_nth_lefttruncatableprime(n):
                 p = p + 1
     return p
 
-print(fun_nth_lefttruncatableprime(15))
+print(fun_nth_lefttruncatableprime(20))
