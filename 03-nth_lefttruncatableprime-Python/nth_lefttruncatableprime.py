@@ -12,7 +12,7 @@ import math
 
 def isprime(n):
 	if(n == 1):
-		return True
+		return False
 	i = 1
 	count = 0
 	while(i <= n):
@@ -30,6 +30,17 @@ def fun_nth_lefttruncatableprime(n):
     while(count <= n):
         s = str(p)
         if(len(s) == 1):
+            if(isprime(p)):
+                print(count,p)
+                count = count + 1
+                if(count == n):
+                    break
+                else:
+                    p = p + 1
+            else:
+                p = p + 1
+        elif(len(s) == 2):
+            print("p",p)
             if(isprime(p)):
                 print(count,p)
                 count = count + 1
