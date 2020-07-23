@@ -14,7 +14,7 @@ def rotate(input,d):
 
 def isprime(n):
 	if(n == 1):
-		return True
+		return False
 	i = 1
 	count = 0
 	while(i <= n):
@@ -52,4 +52,4 @@ def nthcircularprime(n):
 				p = p + 1
 	return p
 
-print(nthcircularprime(1))
+print(nthcircularprime(6))
