@@ -35,6 +35,8 @@ def fun_nth_lefttruncatableprime(n):
                 count = count + 1
                 if(count == n):
                     break
+                else:
+                    p = p + 1
             else:
                 p = p + 1
         else:
