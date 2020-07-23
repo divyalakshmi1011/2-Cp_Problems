@@ -24,7 +24,9 @@ def nthpowerfulnumber(n):
 		l = factors(p)
 		for i in l:
 			if(prime(i)):
+				print(i,p,count)
 				if(p % (i**2) == 0):
+					print("divya",p,i**2)
 					count = count + 1
 		if(count == n):
 			break
@@ -32,4 +34,4 @@ def nthpowerfulnumber(n):
 			p = p + 1
 	return p
 
-print(nthpowerfulnumber(4))
+print(nthpowerfulnumber(5))
