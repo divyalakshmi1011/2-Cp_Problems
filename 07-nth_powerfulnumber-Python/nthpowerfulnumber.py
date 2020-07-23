@@ -12,6 +12,7 @@ def factors(n):
 	for i in range(1,n):
 		if(n % i == 0):
 			if(prime(i)):
+				print(i)
 				L.append(i)
 	return L
 
@@ -24,15 +25,18 @@ def nthpowerfulnumber(n):
 	while(count <= n):
 		l = factors(p)
 		flag = True
-		for i in l:
-			if(p % (i**2) != 0):
-				flag = False
-		if(flag):
-			count = count + 1
-		if(count == n):
-			break
-		else:
+		if(len(l) == 0):
 			p = p + 1
+		else:
+			for i in l:
+				if(p % (i**2) != 0):
+					flag = False
+			if(flag):
+				count = count + 1
+			if(count == n):
+				break
+			else:
+				p = p + 1
 	return p
 
-print(nthpowerfulnumber(1))
+print(factors(3))
