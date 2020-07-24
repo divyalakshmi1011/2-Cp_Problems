@@ -25,3 +25,7 @@ def nthautomorphicnumbers(n):
 	return a
 
 print(nthautomorphicnumbers(0))
+print(nthautomorphicnumbers(1))
+print(nthautomorphicnumbers(2))
+print(nthautomorphicnumbers(3))
+print(nthautomorphicnumbers(4))
