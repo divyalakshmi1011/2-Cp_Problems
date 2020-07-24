@@ -8,7 +8,29 @@ def factors(n):
         if(n % i == 0):
                 l.append(i)
     return l
+def ispronic(n):
+	l = factors(n)
+	for i in range(len(l) - 1):
+		# print(l[i],l[i + 1])
+		if(l[i] == l[i + 1] - 1):
+			return True
+	return False
 
 def nthpronicnumber(n):
 	# Your code goes here
-	pass
+	if(n == 0):
+		return 0
+	c = 2
+	count = 0
+	while(count <= n):
+		# print("c",c)
+		if(ispronic(c)):
+			print("divya",c)
+			count += 1
+			if(count == n):
+				break
+			else: c += 1
+		else: c += 1
+	return c
+
+print(nthpronicnumber(5))
