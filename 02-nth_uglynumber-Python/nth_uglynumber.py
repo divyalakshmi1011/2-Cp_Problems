@@ -13,13 +13,21 @@ def isprime(n):
     else:
         return False
 
-def factors(n):
+def uglyfactors(n):
     l = []
     for i in range(1,n + 1):
         if(n % i == 0):
             if(isprime(i)):
                 if( i == 3 or i == 5 or i == 2):
                     l.append(i)
+    return l
+
+def factors(n):
+    l = []
+    for i in range(1,n + 1):
+        if(n % i == 0):
+            if(isprime(i)):
+                l.append(i)
     return l
 
 
@@ -30,7 +38,9 @@ def fun_nth_uglynumber(n):
     u = 2
     while(count <= n):
         l = factors(u)
-        if(len(l) > 0):
+        l2 = uglyfactors(u)
+        print(l)
+        if(len(l) == len(l2)):
             count = count + 1
             if(count == n):
                 break
