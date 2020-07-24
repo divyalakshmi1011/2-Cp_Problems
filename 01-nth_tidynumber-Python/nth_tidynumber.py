@@ -6,14 +6,12 @@
 # fun_nth_tidynumber(15) = 17
 # fun_nth_tidynumber(35) = 46
 def isTidy(num):
-    p = 10
-    while(num):
-        rem = num % 10
-        num /= 10
-        if rem > p:
+    s = str(num)
+    for i in range(len(s) - 1):
+        if(s[i] > s[i + 1]):
             return False
-        p = rem
     return True
+    
 def fun_nth_tidynumber(n):
     count = 0
     t = 1
