@@ -31,7 +31,10 @@ def longestcommonsubstring(s1, s2):
         print(l)
         for i in l:
             if i in s1:
-                if( len(x) < len(i)):
+                if(len(x) == len(i)):
+                    if(i < x):
+                        x = i
+                elif( len(x) < len(i)):
                     x = i
     return x
 
