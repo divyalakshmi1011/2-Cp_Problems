@@ -33,7 +33,7 @@ class nthtenlyprime {
 				int b = Character.getNumericValue(a.charAt(i));
 				sum += b;
 			}
-			System.out.println(t + " " + sum);
+			// System.out.println(t + " " + sum);
 			if(sum == 10) {
 				c += 1;
 				if(c == n) {
