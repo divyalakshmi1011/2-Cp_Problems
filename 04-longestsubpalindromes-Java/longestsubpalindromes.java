@@ -27,7 +27,7 @@ class longestsubpalindromes {
 			if(sr.length() > x.length()){
 				x = sr;
 			} else if(sr.length() == x.length()) {
-				if(sr.compareTo(x) > 0) {
+				if(sr.compareTo(x) < 0) {
 					x = sr;
 				}
 			}
