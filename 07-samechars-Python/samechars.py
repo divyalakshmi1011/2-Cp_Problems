@@ -11,9 +11,17 @@ def samechars(x):
 	s2 = x[1]
 	if(type(s1) != str or type(s2) != str):
 		return False
+	flag1 = True
 	for i in s1:
 		if i not in s2:
-			return False
-	return True
+			flag1 = False
+	flag2 = True
+	for i in s2:
+		if i not in s1:
+			flag2 = False
+	if(flag1 and flag2):
+		return True
+	else:
+		return False
 
 print(samechars(("abcabcabc", "cbad")))
