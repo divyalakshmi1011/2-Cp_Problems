@@ -8,11 +8,10 @@ def permute(l,s,e,p):
 		p.append(tuple(l))
 	else:
 		for i in range(s,e+1):
-			# l[s], l[i] = l[i], l[s]
 			l[s], l[i] = l[i], l[s]
 			permute(l, s+1, e,p)
-			# l[s], l[i] = l[i], l[s]
 			l[s], l[i] = l[i], l[s]
+
 def getallpermutations(x):
 	s = 0
 	e = len(x) - 1
@@ -20,7 +19,7 @@ def getallpermutations(x):
 	p = []
 	permute(l,s,e,p)
 	# p.sort()
-	return p
+	return list(permutations(x, r=len(x)))
 
 print(getallpermutations("xyza"))
 print(list(permutations("xyza", r=len("xyza"))))
