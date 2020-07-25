@@ -11,24 +11,31 @@ import java.util.*;
 class hasbalancedparantheses {
 	public static boolean fun_hasbalancedparantheses(String s){
 		ArrayList<Character> l = new ArrayList<Character>();
+		s = s.replace(" ","");
 		for(int i = 0; i < s.length(); i++){
 			if(s.charAt(i) == '(') {
 				l.add(s.charAt(i));
-			} else {
+			} else if(Character.isDigit(s.charAt(i))) {
+				int f = 0;
+			}
+			else {
 				if(l.size() == 0) {
-					System.out.println(l.size() + "d");
+					// System.out.println(l.size() + "d");
 					return false;
 				}
 				Character curchar = l.get(l.size() - 1);
+				l.remove(l.size() - 1);
+				// System.out.println(l);
 				if(curchar == '(') {
 					if(s.charAt(i) != ')') {
-						System.out.println(s.charAt(i) + "i");
+						// System.out.println(s.charAt(i) + "i");
 						return false;
 					}
 				}
 			}
 		}
 		if(l.size() > 0) {
+			// System.out.println("0");
 			return false;
 		}
 		return true;
