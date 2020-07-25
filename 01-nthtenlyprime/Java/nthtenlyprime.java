@@ -58,9 +58,9 @@ class nthtenlyprime {
 	public static void main(String[] args) {
 		System.out.println(isprime(50));
 		System.out.println(fun_nthtenlyprime(0));
-		System.out.println(fun_nthtenlyprime(1));
-		System.out.println(fun_nthtenlyprime(2));
-		System.out.println(fun_nthtenlyprime(3));
-		System.out.println(fun_nthtenlyprime(4));
+		System.out.println(fun_nthtenlyprime(15));
+		System.out.println(fun_nthtenlyprime(20));
+		System.out.println(fun_nthtenlyprime(25));
+		System.out.println(fun_nthtenlyprime(10));
 	}
 }
