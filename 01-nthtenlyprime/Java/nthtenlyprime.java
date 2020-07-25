@@ -44,6 +44,8 @@ class nthtenlyprime {
 			} else {
 				t += 1;
 			}
+		} else {
+			t += 1;
 		}
 	}
 	}
