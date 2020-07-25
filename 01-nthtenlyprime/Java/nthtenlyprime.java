@@ -27,6 +27,7 @@ class nthtenlyprime {
 		if(a.length() == 1) {
 			t += 1;
 		} else {
+			if(isprime(t)) {
 			int sum = 0;
 			for(int i = 0; i < a.length(); i++) {
 				int b = Character.getNumericValue(a.charAt(i));
@@ -44,6 +45,7 @@ class nthtenlyprime {
 				t += 1;
 			}
 		}
+	}
 	}
 	return t;
 	}
