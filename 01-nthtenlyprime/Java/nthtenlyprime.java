@@ -34,7 +34,7 @@ class nthtenlyprime {
 				sum += b;
 			}
 			System.out.println(t + " " + sum);
-			if(isprime(sum)) {
+			if(sum == 10) {
 				c += 1;
 				if(c == n) {
 					break;
