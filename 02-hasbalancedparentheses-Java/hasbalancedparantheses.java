@@ -16,11 +16,13 @@ class hasbalancedparantheses {
 				l.add(s.charAt(i));
 			} else {
 				if(l.size() == 0) {
+					System.out.println(l.size() + "d");
 					return false;
 				}
 				Character curchar = l.get(l.size() - 1);
 				if(curchar == '(') {
 					if(s.charAt(i) != ')') {
+						System.out.println(s.charAt(i) + "i");
 						return false;
 					}
 				}
