@@ -17,6 +17,8 @@ def getallpermutations(x):
 	l = list(x)
 	p = []
 	permute(l,s,e,p)
+	p.sort()
 	return p
 
 print(getallpermutations("abcd"))
+print(list(permutations("abcd", r=len("abcd"))))
