@@ -53,6 +53,10 @@ class nthtenlyprime {
 	}
 	public static void main(String[] args) {
 		System.out.println(isprime(50));
+		System.out.println(fun_nthtenlyprime(0));
+		System.out.println(fun_nthtenlyprime(1));
+		System.out.println(fun_nthtenlyprime(2));
 		System.out.println(fun_nthtenlyprime(3));
+		System.out.println(fun_nthtenlyprime(4));
 	}
 }
