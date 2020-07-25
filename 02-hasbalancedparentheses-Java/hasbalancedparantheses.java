@@ -9,7 +9,7 @@
 import java.util.*;
  
 class hasbalancedparantheses {
-	public boolean fun_hasbalancedparantheses(String s){
+	public static boolean fun_hasbalancedparantheses(String s){
 		ArrayList<Character> l = new ArrayList<Character>();
 		for(int i = 0; i < s.length(); i++){
 			if(s.charAt(i) == '(') {
@@ -30,6 +30,9 @@ class hasbalancedparantheses {
 			return false;
 		}
 		return true;
+	}
+	public static void main(String[] args) {
+		System.out.println(fun_hasbalancedparantheses("( ( ( ( )3)))  "));
 	}
 }
 	
