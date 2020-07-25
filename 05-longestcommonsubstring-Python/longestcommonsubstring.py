@@ -6,14 +6,32 @@
 # If there are two or more longest common substrings, return the lexicographically smaller one (ie, just use "<" to 
 # compare the strings). So, for example:
 # longestCommonSubstring("abcABC", "zzabZZAB") returns "AB" and not "ab"
+def substrings(test_str):
+    res = [test_str[i: j] for i in range(len(test_str))
+          for j in range(i + 1, len(test_str) + 1)]
+    return res
 
 def longestcommonsubstring(s1, s2):
     if(len(s1) == 0 or len(s2) == 0):
         return ""
-    s = ""
-    for i in s1:
-        if i in s2:
-            s += i
-    return s
+    l1 = len(s1)
+    l2 = len(s2)
+    x = ""
+    if(l1 < l2):
+        l = substrings(s1)
+        for i in l:
+            if i in s2:
+                if(len(x) == len(i)):
+                    if(i > x):
+                        x = i
+                elif( len(x) < len(i)):
+                    x = i
+    else:
+        l = substrings(s11)
+        for i in l:
+            if i in s1:
+                if( len(x) < len(i)):
+                    x = i
+    return x
 
-print(longestcommonsubstring("abcdef", "abqrcdest"))
+print(longestcommonsubstring("abcABC", "zzabZZAB"))
