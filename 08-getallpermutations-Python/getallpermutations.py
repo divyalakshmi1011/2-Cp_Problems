@@ -17,7 +17,7 @@ def getallpermutations(x):
 	l = list(x)
 	p = []
 	permute(l,s,e,p)
-	p.sort()
+	# p.sort()
 	return p
 
 print(getallpermutations("xyza"))
