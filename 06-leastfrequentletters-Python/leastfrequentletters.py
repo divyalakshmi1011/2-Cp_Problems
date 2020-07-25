@@ -19,6 +19,9 @@ def leastfrequentletters(s):
 				d[i] += 1
 	l = list(d.values())
 	m = min(l)
-	print(m)
+	y =""
+	for key, value in d.items(): 
+		if m == value: 
+			y += key
 
 leastfrequentletters("aDq efQ? FB'daf!!!")
