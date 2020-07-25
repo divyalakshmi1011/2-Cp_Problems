@@ -20,5 +20,5 @@ def getallpermutations(x):
 	p.sort()
 	return p
 
-print(getallpermutations("abcd"))
-print(list(permutations("abcd", r=len("abcd"))))
+print(getallpermutations("xyza"))
+print(list(permutations("xyza", r=len("xyza"))))
