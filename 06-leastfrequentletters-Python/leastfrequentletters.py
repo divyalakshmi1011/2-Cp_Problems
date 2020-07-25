@@ -11,17 +11,24 @@ def leastfrequentletters(s):
 	s = s.replace(" ","")
 	s = s.lower()
 	d = {}
+	t = ""
 	for i in s:
 		if i.isalpha():
+			t += i
 			if i not in d:
 				d[i] = 1
 			else:
 				d[i] += 1
+	if(len(t) == 0):
+		return ""
 	l = list(d.values())
 	m = min(l)
 	y =""
 	for key, value in d.items(): 
 		if m == value: 
 			y += key
+	k = list(y)
+	k.sort()
+	return "".join(k)
 
-leastfrequentletters("aDq efQ? FB'daf!!!")
+leastfrequentletters("abc def! GFE'cag!!!")
