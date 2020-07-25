@@ -19,15 +19,19 @@ class nthtenlyprime {
 		}
 	}
 	public static int fun_nthtenlyprime(int n){
+		if( n == 0) {
+			return 19;
+		}
 		// String a = Integer.toString(n);
 		int c = 0;
-		int t = 2;
+		int t = 20;
 		while(c <= n) {
 		String a = Integer.toString(t);
 		if(a.length() == 1) {
 			t += 1;
 		} else {
 			if(isprime(t)) {
+				System.out.println("t" + t);
 			int sum = 0;
 			for(int i = 0; i < a.length(); i++) {
 				int b = Character.getNumericValue(a.charAt(i));
