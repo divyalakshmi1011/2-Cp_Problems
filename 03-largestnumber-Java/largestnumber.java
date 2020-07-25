@@ -10,9 +10,19 @@
 import java.util.*;
 
 class largestnumber {
-	public static ArrayList<Integer> fun_largestnumber(String s){
+	public static int fun_largestnumber(String s){
 		String[] array = s.split(" ");
 		ArrayList<Integer> l = new ArrayList<Integer>();
+		if(array.length == 1) {
+			String d = array[0];
+			d = d.replaceAll("[^\\d]", " ");
+			d = d.trim();
+			d = d.replaceAll(" +", " ");
+			String[] a = d.split(" ");
+			for(int o = 0; o < a.length; o++) {
+				l.add(Integer.parseInt(a[o]));
+			}
+		} else {
 		for(int i = 0; i < array.length; i++) {
 			String k = array[i];
 			for(int j = 0; j < k.length(); j++) {
@@ -24,7 +34,11 @@ class largestnumber {
 				}
 			}
 		}
-		return l;
+	}
+		if(l.size() == 0) {
+			return 0;
+		}
+		return Collections.max(l);
 	}
 	public static void main(String[] args) {
 		System.out.println(fun_largestnumber("I saw 3 dogs, 17 cats, and 14 cows!"));
