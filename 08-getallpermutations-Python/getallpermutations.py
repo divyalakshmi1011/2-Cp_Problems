@@ -8,8 +8,10 @@ def permute(l,s,e,p):
 		p.append(tuple(l))
 	else:
 		for i in range(s,e+1):
+			# l[s], l[i] = l[i], l[s]
 			l[s], l[i] = l[i], l[s]
 			permute(l, s+1, e,p)
+			# l[s], l[i] = l[i], l[s]
 			l[s], l[i] = l[i], l[s]
 def getallpermutations(x):
 	s = 0
