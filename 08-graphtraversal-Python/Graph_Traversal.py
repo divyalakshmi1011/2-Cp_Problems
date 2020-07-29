@@ -150,7 +150,7 @@ class Graph(object):
             temp = item[0]
             node = self.find_node(temp)
             if(not node.visited):
-                list + self.dfs_helper(self,node)
+                list = list + self.dfs_helper(node)
         return list
 
     def dfs(self, start_node_num):
@@ -174,6 +174,7 @@ class Graph(object):
         ARGUMENTS: start_node_num is the node number (integer)
         MODIFIES: the value of the visited property of nodes in self.nodes
         RETURN: a list of the node values (integers)."""
+        self._clear_visited()
         q = Queue(maxsize=0)
         node = self.find_node(start_node_num)
         node.visited = True
@@ -193,7 +194,7 @@ class Graph(object):
 
     def bfs_names(self, start_node_num):
         """Return the results of bfs with numbers converted to names."""
-        del ret_list[0 : len(ret_list)]
+        # del ret_list[0 : len(ret_list)]
         return [self.node_names[num] for num in self.bfs(start_node_num)]
 
 graph = Graph()
@@ -218,3 +219,4 @@ graph.insert_edge(9471, 2, 5)   # London <-> Sao Paolo
 graph.insert_edge(9471, 5, 2)   # Sao Paolo <-> London
 
 print(graph.bfs(2))
+print(graph.dfs(2))
