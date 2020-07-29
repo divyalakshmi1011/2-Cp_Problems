@@ -12,9 +12,15 @@ public class Queue{
     public static int pop() {
         while(!s1.empty()) {
             int temp = s1.pop();
+            // System.out.println("temp" + temp);
             s2.push(temp);
         }
         int p = s2.pop();
+        while(!s2.empty()) {
+            int temp = s2.pop();
+            // System.out.println("temp" + temp);
+            s1.push(temp);
+        }
         return p;
     }
     public static void main(String[] args) {
@@ -23,8 +29,10 @@ public class Queue{
         push(3);
         System.out.println(pop());
         push(4);
-        // push(5);
-        // push(6);
+        push(5);
+        push(6);
+        System.out.println(pop());
+        System.out.println(pop());
         System.out.println(pop());
     }
 }
