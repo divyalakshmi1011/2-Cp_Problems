@@ -10,8 +10,7 @@ public class Queue{
         s1.push(a);
     }
     public static int pop() {
-        Iterator<Integer> it = s1.iterator();
-        while(it.hasNext()){
+        while(!s1.empty()) {
             int temp = s1.pop();
             s2.push(temp);
         }
