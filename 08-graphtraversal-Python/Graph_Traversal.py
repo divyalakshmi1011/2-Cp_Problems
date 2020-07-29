@@ -1,3 +1,6 @@
+import queue
+from queue import *
+
 class Node(object):
     def __init__(self, value):
         self.value = value
@@ -140,7 +143,15 @@ class Graph(object):
         MODIFIES: the value of the visited property of nodes in self.nodes 
         RETURN: a list of the traversed node values (integers).
         """
-        pass
+        al = self.get_adjacency_list()[start_node.value]
+        start_node.visited = True
+        list = [start_node.value]
+        for item in al:
+            temp = item[0]
+            node = self.find_node(temp)
+            if(not node.visited):
+                list + self.dfs_helper(self,node)
+        return list
 
     def dfs(self, start_node_num):
         """Outputs a list of numbers corresponding to the traversed nodes
@@ -163,11 +174,47 @@ class Graph(object):
         ARGUMENTS: start_node_num is the node number (integer)
         MODIFIES: the value of the visited property of nodes in self.nodes
         RETURN: a list of the node values (integers)."""
-        pass
+        q = Queue(maxsize=0)
+        node = self.find_node(start_node_num)
+        node.visited = True
+        q.put(node)
+        list = []
+        while(not q.empty()):
+            temp = q.get()
+            list.append(temp.value)
+            x = self.get_adjacency_list()[temp.value]
+            for item in x:
+                num = item[0]
+                n = self.find_node(num)
+                if(not n.visited):
+                    n.visited = True
+                    q.put(n)
+        return list
 
     def bfs_names(self, start_node_num):
         """Return the results of bfs with numbers converted to names."""
         del ret_list[0 : len(ret_list)]
         return [self.node_names[num] for num in self.bfs(start_node_num)]
 
+graph = Graph()
+graph.set_node_names(('Mountain View', 'San Francisco',
+                      'London', 'Shanghai', 'Berlin', 'Sao Paolo', 'Bangalore'))
 
+graph.insert_edge(51, 0, 1)     # MV <-> SF
+graph.insert_edge(51, 1, 0)     # SF <-> MV
+graph.insert_edge(9950, 0, 3)   # MV <-> Shanghai
+graph.insert_edge(9950, 3, 0)   # Shanghai <-> MV
+graph.insert_edge(10375, 0, 5)  # MV <-> Sao Paolo
+graph.insert_edge(10375, 5, 0)  # Sao Paolo <-> MV
+graph.insert_edge(9900, 1, 3)   # SF <-> Shanghai
+graph.insert_edge(9900, 3, 1)   # Shanghai <-> SF
+graph.insert_edge(9130, 1, 4)   # SF <-> Berlin
+graph.insert_edge(9130, 4, 1)   # Berlin <-> SF
+graph.insert_edge(9217, 2, 3)   # London <-> Shanghai
+graph.insert_edge(9217, 3, 2)   # Shanghai <-> London
+graph.insert_edge(932, 2, 4)    # London <-> Berlin
+graph.insert_edge(932, 4, 2)    # Berlin <-> London
+graph.insert_edge(9471, 2, 5)   # London <-> Sao Paolo
+graph.insert_edge(9471, 5, 2)   # Sao Paolo <-> London
+
+print(graph.bfs(2))
