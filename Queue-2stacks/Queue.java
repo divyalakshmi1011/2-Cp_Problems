@@ -12,7 +12,7 @@ public class Queue{
     public static int pop() {
         Iterator<Integer> it = s1.iterator();
         while(it.hasNext()){
-            int temp = it.next();
+            int temp = s1.pop();
             s2.push(temp);
         }
         int p = s2.pop();
@@ -22,6 +22,10 @@ public class Queue{
         push(1);
         push(2);
         push(3);
+        System.out.println(pop());
+        push(4);
+        // push(5);
+        // push(6);
         System.out.println(pop());
     }
 }
